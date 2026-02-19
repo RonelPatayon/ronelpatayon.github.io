@@ -1,18 +1,31 @@
 const toggleLink = document.getElementById('theme-toggle');
 const body = document.body;
 
+// Nav links
+const navLinks = [
+  document.getElementById('nav-about'),
+  document.getElementById('nav-projects'),
+  document.getElementById('nav-skills'),
+  document.getElementById('nav-contact')
+];
+
 const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-// Update link text + icon based on current theme
-function updateLink(theme) {
-  if (theme === 'dark') {
-    toggleLink.innerHTML = '<i class="fa-solid fa-sun me-1"></i> Light Theme';
-  } else {
-    toggleLink.innerHTML = '<i class="fa-solid fa-moon me-1"></i> Dark Theme';
-  }
+function updateLinkIcons(theme) {
+  // Icon colors
+  const color = theme === 'light' ? '#0f172a' : '#e5e7eb';
+
+  navLinks.forEach(link => {
+    const icon = link.querySelector('i');
+    if (icon) icon.style.color = color;
+  });
+
+  // Theme toggle text & icon
+  toggleLink.innerHTML = theme === 'dark'
+    ? '<i class="fa-solid fa-sun me-1"></i> Light Theme'
+    : '<i class="fa-solid fa-moon me-1"></i> Dark Theme';
 }
 
-// Apply theme
 function applyTheme(theme) {
   if (theme === 'light') {
     body.classList.add('light-mode');
@@ -20,24 +33,21 @@ function applyTheme(theme) {
     body.classList.remove('light-mode');
   }
 
-  updateLink(theme);
+  updateLinkIcons(theme);
 }
 
-// 1️⃣ Check saved preference
+// 1️⃣ Load saved theme or system preference
 const savedTheme = localStorage.getItem('theme');
-
 if (savedTheme) {
   applyTheme(savedTheme);
 } else {
-  const systemTheme = systemPrefersDark.matches ? 'dark' : 'light';
-  applyTheme(systemTheme);
+  applyTheme(systemPrefersDark.matches ? 'dark' : 'light');
 }
 
 // 2️⃣ Listen for system changes (only if no manual override)
 systemPrefersDark.addEventListener('change', (e) => {
   if (!localStorage.getItem('theme')) {
-    const newTheme = e.matches ? 'dark' : 'light';
-    applyTheme(newTheme);
+    applyTheme(e.matches ? 'dark' : 'light');
   }
 });
 
