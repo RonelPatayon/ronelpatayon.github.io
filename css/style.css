@@ -1,4 +1,6 @@
-/* Google Font */
+/* ================================
+   GOOGLE FONT
+=================================*/
 body {
   font-family: 'Poppins', sans-serif;
   background: #0f172a; /* Dark mode background */
@@ -6,22 +8,50 @@ body {
   transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* Navbar */
+/* ================================
+   NAVBAR
+=================================*/
 .navbar {
   background: #020617;
   transition: background 0.5s ease;
+  display: flex;
+  align-items: center;
 }
 
-.navbar .nav-link {
-  color: #e5e7eb !important;
-}
-
+/* Navbar brand */
 .navbar .logo {
   font-weight: 600;
   font-size: 1.5rem;
 }
 
-/* Hero Section with gradient */
+/* Nav links */
+.navbar .nav-link {
+  color: #e5e7eb !important;
+  transition: color 0.3s;
+}
+
+/* Hamburger icon (burger) */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Default hamburger color (dark theme) */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+
+/* Light mode hamburger color */
+body.light-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(15,23,42,0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+
+/* ================================
+   HERO SECTION
+=================================*/
 .hero {
   padding: 5rem 2rem;
   text-align: center;
@@ -37,14 +67,21 @@ body {
 
 .hero .tagline {
   font-style: italic;
+  margin-bottom: 1rem;
 }
 
-/* Buttons */
+/* ================================
+   BUTTONS
+=================================*/
 .btn-primary {
   background: #38bdf8;
   border: none;
   color: #020617;
   transition: background 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+  background: #22c0ff;
 }
 
 .btn-outline-primary {
@@ -53,13 +90,25 @@ body {
   transition: border 0.3s, color 0.3s;
 }
 
+.btn-outline-primary:hover {
+  background: #38bdf8;
+  color: #fff;
+}
+
 .btn-outline-light {
   border: 1px solid #e5e7eb;
   color: #e5e7eb;
   transition: border 0.3s, color 0.3s;
 }
 
-/* Sections */
+.btn-outline-light:hover {
+  background: #e5e7eb;
+  color: #020617;
+}
+
+/* ================================
+   SECTIONS
+=================================*/
 section {
   max-width: 900px;
   margin: auto;
@@ -67,9 +116,13 @@ section {
   transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* Project cards */
+/* ================================
+   PROJECT CARDS
+=================================*/
 .project-card {
   transition: transform 0.3s, box-shadow 0.3s;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
 }
 
 .project-card:hover {
@@ -77,7 +130,9 @@ section {
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Light mode */
+/* ================================
+   LIGHT MODE
+=================================*/
 body.light-mode {
   background: #f9f9f9;
   color: #0f172a;
@@ -96,6 +151,10 @@ body.light-mode .hero {
   color: #0f172a;
 }
 
+body.light-mode .hero .role {
+  color: #3b82f6;
+}
+
 body.light-mode .btn-primary {
   background: #0f172a;
   color: #f9f9f9;
@@ -110,17 +169,3 @@ body.light-mode .btn-outline-light {
   border: 1px solid #0f172a;
   color: #0f172a;
 }
-
-.navbar {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
