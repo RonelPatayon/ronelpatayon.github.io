@@ -1,65 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ronel O. Patayon | IT Administrator</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Ronel O. Patayon | IT Systems Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ronel O. Patayon - IT Systems Engineer & Web Application Developer">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
- <header class="navbar">
-  <h1 class="logo">Ronel</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <button id="theme-toggle" class="btn secondary">🌙</button>
-</header>
+    <header>
+        <div class="logo">Ronel.</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <h1>Hi, I'm <span>Ronel O. Patayon</span></h1>
+        <h2>IT Systems Engineer & Web Application Developer</h2>
+        <p>I design, build, and maintain scalable IT infrastructures and custom web systems.</p>
+        <a href="#contact" class="btn">Let's Work Together</a>
+    </section>
 
-  <section class="hero">
-    <h2>RONEL O. PATAYON</h2>
-    <p class="role">IT Administrator | Systems & Web Developer</p>
-    <p class="tagline">I build reliable systems that keep businesses running.</p>
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am an experienced IT professional specializing in system development,
+            networking, data center setup, and web application development.
+            I have built HR, Warehouse, Savings & Borrowing, and Vehicle Management Systems.
+        </p>
 
-    <div class="buttons">
-      <a href="#projects" class="btn primary">View Projects</a>
-      <a href="#" class="btn secondary">Download Resume</a>
-    </div>
-  </section>
+        <div class="skills">
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript, PHP, MySQL</p>
+            </div>
+            <div class="card">
+                <h3>Networking</h3>
+                <p>MikroTik, VLAN, Multi-ISP Load Balancing</p>
+            </div>
+            <div class="card">
+                <h3>Systems Development</h3>
+                <p>HR, Warehouse, Financial & Management Systems</p>
+            </div>
+            <div class="card">
+                <h3>Infrastructure</h3>
+                <p>Server Setup, Data Center, IT Support</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="about">
-    <h3>About Me</h3>
-    <p>
-      I am an IT professional with hands-on experience in networking,
-      data center setup, and custom system development. I build practical
-      solutions that support real business operations.
-    </p>
-  </section>
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>HR Management System</h3>
+                <p>Employee records, payroll management, and reporting system.</p>
+            </div>
+            <div class="card">
+                <h3>Warehouse System</h3>
+                <p>Inventory tracking and stock movement management.</p>
+            </div>
+            <div class="card">
+                <h3>Savings & Borrowing System</h3>
+                <p>Financial tracking system for member-based organizations.</p>
+            </div>
+            <div class="card">
+                <h3>Vehicle Management System</h3>
+                <p>Fleet tracking, maintenance scheduling, and reporting.</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="projects">
-    <h3>Projects</h3>
-    <ul>
-      <li>HR Management System (PHP & MySQL)</li>
-      <li>Warehouse & Inventory System</li>
-      <li>Savings & Borrowing System</li>
-      <li>Vehicle Management System</li>
-      <li>MikroTik Network Infrastructure Setup</li>
-    </ul>
-  </section>
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
 
-  <section id="skills">
-    <h3>Skills</h3>
-    <p>HTML, CSS, JavaScript, PHP, MySQL, MikroTik, Networking, Hardware Servicing</p>
-  </section>
+    <footer>
+        <p>© 2026 Ronel O. Patayon | All Rights Reserved</p>
+    </footer>
 
-  <section id="contact">
-    <h3>Contact</h3>
-    <p>Email: your@email.com</p>
-  </section>
-
+    <script src="script.js"></script>
 </body>
 </html>
