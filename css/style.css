@@ -55,3 +55,27 @@ section {
   max-width: 900px;
   margin: auto;
 }
+/* Light mode styles */
+body.light-mode {
+  background: #f9f9f9;
+  color: #0f172a;
+}
+
+body.light-mode .navbar {
+  background: #e5e7eb;
+}
+
+body.light-mode .navbar a {
+  color: #0f172a;
+}
+
+body.light-mode .btn.primary {
+  background: #0f172a;
+  color: #f9f9f9;
+}
+
+body.light-mode .btn.secondary {
+  border: 1px solid #0f172a;
+  color: #0f172a;
+}
+
