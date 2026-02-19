@@ -1,51 +1,53 @@
-const toggleDesktop = document.getElementById('theme-toggle');
-const toggleMobile = document.getElementById('theme-toggle-mobile');
+const toggleLink = document.getElementById('theme-toggle');
 const body = document.body;
 
 const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-function updateIcons(theme) {
-  const icon = theme === 'light'
-    ? '<i class="fa-solid fa-sun"></i>'
-    : '<i class="fa-solid fa-moon"></i>';
-
-  if (toggleDesktop) toggleDesktop.innerHTML = icon;
-  if (toggleMobile) toggleMobile.innerHTML = icon;
+// Update link text + icon based on current theme
+function updateLink(theme) {
+  if (theme === 'dark') {
+    toggleLink.innerHTML = '<i class="fa-solid fa-sun me-1"></i> Light Theme';
+  } else {
+    toggleLink.innerHTML = '<i class="fa-solid fa-moon me-1"></i> Dark Theme';
+  }
 }
 
+// Apply theme
 function applyTheme(theme) {
   if (theme === 'light') {
     body.classList.add('light-mode');
   } else {
     body.classList.remove('light-mode');
   }
-  updateIcons(theme);
+
+  updateLink(theme);
 }
 
-// Check saved theme
+// 1️⃣ Check saved preference
 const savedTheme = localStorage.getItem('theme');
 
 if (savedTheme) {
   applyTheme(savedTheme);
 } else {
-  applyTheme(systemPrefersDark.matches ? 'dark' : 'light');
+  const systemTheme = systemPrefersDark.matches ? 'dark' : 'light';
+  applyTheme(systemTheme);
 }
 
-// Listen to system change
+// 2️⃣ Listen for system changes (only if no manual override)
 systemPrefersDark.addEventListener('change', (e) => {
   if (!localStorage.getItem('theme')) {
-    applyTheme(e.matches ? 'dark' : 'light');
+    const newTheme = e.matches ? 'dark' : 'light';
+    applyTheme(newTheme);
   }
 });
 
-// Toggle function
-function toggleTheme() {
-  const isLight = body.classList.contains('light-mode');
-  const newTheme = isLight ? 'dark' : 'light';
+// 3️⃣ Manual toggle
+toggleLink.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
   applyTheme(newTheme);
   localStorage.setItem('theme', newTheme);
-}
-
-// Attach events
-if (toggleDesktop) toggleDesktop.addEventListener('click', toggleTheme);
-if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+});
