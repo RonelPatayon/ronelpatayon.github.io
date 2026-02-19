@@ -23,6 +23,9 @@ body {
   font-weight: 600;
   font-size: 1.5rem;
 }
+.navbar .nav-link i {
+  transition: color 0.5s;
+}
 
 /* Nav links */
 .navbar .nav-link {
