@@ -110,3 +110,17 @@ body.light-mode .btn-outline-light {
   border: 1px solid #0f172a;
   color: #0f172a;
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
