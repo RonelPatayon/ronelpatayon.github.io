@@ -1,50 +1,51 @@
-const toggleButton = document.getElementById('theme-toggle');
+const toggleDesktop = document.getElementById('theme-toggle');
+const toggleMobile = document.getElementById('theme-toggle-mobile');
 const body = document.body;
 
-// Detect system theme
 const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-// Function to apply theme
+function updateIcons(theme) {
+  const icon = theme === 'light'
+    ? '<i class="fa-solid fa-sun"></i>'
+    : '<i class="fa-solid fa-moon"></i>';
+
+  if (toggleDesktop) toggleDesktop.innerHTML = icon;
+  if (toggleMobile) toggleMobile.innerHTML = icon;
+}
+
 function applyTheme(theme) {
   if (theme === 'light') {
     body.classList.add('light-mode');
-    toggleButton.innerHTML = '<i class="fa-solid fa-sun"></i>';
   } else {
     body.classList.remove('light-mode');
-    toggleButton.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
+  updateIcons(theme);
 }
 
-// 1️⃣ Check saved preference
+// Check saved theme
 const savedTheme = localStorage.getItem('theme');
 
 if (savedTheme) {
   applyTheme(savedTheme);
 } else {
-  // 2️⃣ Follow system preference
-  if (systemPrefersDark.matches) {
-    applyTheme('dark');
-  } else {
-    applyTheme('light');
-  }
+  applyTheme(systemPrefersDark.matches ? 'dark' : 'light');
 }
 
-// 3️⃣ Listen for system theme changes (if no manual override)
+// Listen to system change
 systemPrefersDark.addEventListener('change', (e) => {
   if (!localStorage.getItem('theme')) {
     applyTheme(e.matches ? 'dark' : 'light');
   }
 });
 
-// 4️⃣ Manual toggle
-toggleButton.addEventListener('click', () => {
+// Toggle function
+function toggleTheme() {
   const isLight = body.classList.contains('light-mode');
+  const newTheme = isLight ? 'dark' : 'light';
+  applyTheme(newTheme);
+  localStorage.setItem('theme', newTheme);
+}
 
-  if (isLight) {
-    applyTheme('dark');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    applyTheme('light');
-    localStorage.setItem('theme', 'light');
-  }
-});
+// Attach events
+if (toggleDesktop) toggleDesktop.addEventListener('click', toggleTheme);
+if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
