@@ -1,21 +1,22 @@
-const toggleButton = document.getElementById('theme-toggle');
+const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 
-// Check saved theme in localStorage
-if(localStorage.getItem('theme') === 'light'){
-  body.classList.add('light-mode');
-  toggleButton.textContent = '☀️';
-}
+toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("light-mode");
 
-// Toggle theme on button click
-toggleButton.addEventListener('click', () => {
-  body.classList.toggle('light-mode');
+    if (body.classList.contains("light-mode")) {
+        toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        localStorage.setItem("theme", "light");
+    } else {
+        toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        localStorage.setItem("theme", "dark");
+    }
+});
 
-  if(body.classList.contains('light-mode')){
-    toggleButton.textContent = '☀️';
-    localStorage.setItem('theme', 'light');
-  } else {
-    toggleButton.textContent = '🌙';
-    localStorage.setItem('theme', 'dark');
-  }
+window.addEventListener("load", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+        body.classList.add("light-mode");
+        toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
 });
