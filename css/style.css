@@ -16,24 +16,21 @@ body {
   transition: background 0.5s ease;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
 }
 
-/* Navbar brand */
 .navbar .logo {
   font-weight: 600;
   font-size: 1.5rem;
 }
-.navbar .nav-link i {
-  transition: color 0.5s;
-}
 
-/* Nav links */
 .navbar .nav-link {
   color: #e5e7eb !important;
   transition: color 0.3s;
 }
 
-/* Hamburger icon (burger) */
+/* Hamburger icon */
 .navbar-toggler {
   border: none;
 }
@@ -50,6 +47,11 @@ body {
 /* Light mode hamburger color */
 body.light-mode .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(15,23,42,0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+
+/* Navbar icon smooth transition */
+.navbar .nav-link i {
+  transition: color 0.5s;
 }
 
 /* ================================
@@ -171,4 +173,44 @@ body.light-mode .btn-outline-primary {
 body.light-mode .btn-outline-light {
   border: 1px solid #0f172a;
   color: #0f172a;
+}
+
+/* ================================
+   MOBILE RESPONSIVE (<992px)
+=================================*/
+@media (max-width: 991px) {
+
+  /* Navbar links spacing */
+  .navbar-nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .navbar .nav-link {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  /* Hero padding smaller */
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  /* Project cards full width */
+  #projects .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Sections padding smaller */
+  section {
+    padding: 2rem 1rem;
+  }
+
+  /* Buttons full width for hero */
+  .hero .btn {
+    display: block;
+    width: 80%;
+    margin: 0.5rem auto;
+  }
 }
