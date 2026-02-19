@@ -169,8 +169,4 @@ body.light-mode .btn-outline-light {
   border: 1px solid #0f172a;
   color: #0f172a;
 }
-/* Force hamburger icon to always white */
-.navbar-toggler-icon {
-  filter: invert(100%);
-}
 
