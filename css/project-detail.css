@@ -213,4 +213,242 @@
   font-size: 0.9rem;
   line-height: 1.6;
   color: #e5e7eb;
- 
+  margin: 0;
+}
+
+/* Gallery */
+.gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 250px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  color: white;
+  padding: 2rem 1.5rem 1.5rem;
+  transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-overlay {
+  bottom: 0;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay h5 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.gallery-overlay p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Challenges Section */
+.challenge-item {
+  background: var(--dark-surface);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+.challenge-item:hover {
+  transform: translateX(10px);
+  border-left: 4px solid var(--primary-color);
+}
+
+.challenge-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.challenge-header i {
+  font-size: 1.5rem;
+}
+
+.challenge-header h3 {
+  margin: 0;
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: var(--dark-surface);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.testimonial-author img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Related Projects */
+.related-card {
+  background: var(--dark-surface);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+  height: 100%;
+}
+
+.related-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.related-content {
+  padding: 2rem;
+}
+
+.related-content p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 70% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode Overrides */
+body.light-mode .project-hero {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+body.light-mode .overview-content,
+body.light-mode .feature-card,
+body.light-mode .tech-item,
+body.light-mode .arch-box,
+body.light-mode .schema-diagram,
+body.light-mode .challenge-item,
+body.light-mode .testimonial-card,
+body.light-mode .related-card {
+  background: var(--light-surface);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+body.light-mode .schema-code {
+  background: #f1f5f9;
+  color: var(--light-text);
+}
+
+body.light-mode .cta-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-hero {
+    min-height: 50vh;
+    text-align: center;
+  }
+  
+  .project-links .btn {
+    display: block;
+    margin: 1rem 0;
+    width: 100%;
+  }
+  
+  .project-links .btn:first-child {
+    margin-bottom: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .architecture-content {
+    padding: 2rem 1rem;
+  }
+  
+  .gallery-item {
+    height: 200px;
+  }
+  
+  .testimonial-card {
+    padding: 2rem;
+  }
+  
+  .testimonial-author {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .challenge-item:hover {
+    transform: none;
+  }
+  
+  .cta-section {
+    padding: 60px 0;
+  }
+}
+
+/* Animations */
+.tech-item, .feature-card, .stat-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
