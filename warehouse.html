@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Warehouse & Inventory System | Ronel O. Patayon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Real-time warehouse management system with inventory tracking, barcode scanning, stock alerts, and multi-warehouse support">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6.4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html">Ronel Patayon</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link theme-toggle" href="#" id="theme-toggle">
+              <i class="fa-solid fa-moon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Hero Section -->
+  <section class="project-hero">
+    <div class="container">
+      <div class="row align-items-center min-vh-50 py-5">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="project-badge mb-4">
+            <span class="badge bg-primary me-2">Laravel & Vue.js</span>
+            <span class="badge bg-primary me-2">Full Stack</span>
+            <span class="badge bg-primary">Real-time</span>
+          </div>
+          <h1 class="display-3 fw-bold mb-3">Warehouse & Inventory Management System</h1>
+          <p class="lead mb-4">A comprehensive inventory management solution designed to streamline warehouse operations, track stock levels in real-time, manage multiple warehouses, and optimize supply chain processes.</p>
+          <div class="project-links">
+            <a href="#" class="btn btn-primary btn-lg me-3"><i class="fas fa-eye me-2"></i>Live Demo</a>
+            <a href="#" class="btn btn-outline-primary btn-lg"><i class="fab fa-github me-2"></i>Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="project-overview section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title" data-aos="fade-up">Project Overview</h2>
+          <div class="overview-content" data-aos="fade-up" data-aos-delay="100">
+            <p class="lead">The Warehouse & Inventory Management System was developed to solve inventory inaccuracies, streamline order fulfillment, and provide real-time visibility into stock levels across multiple warehouse locations. This system has helped businesses reduce stockouts by 75% and improve inventory accuracy to 99.5%.</p>
+            
+            <div class="row mt-5">
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">10,000+</div>
+                  <div class="stat-label">SKUs Managed</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">99.5%</div>
+                  <div class="stat-label">Inventory Accuracy</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">75%</div>
+                  <div class="stat-label">Reduced Stockouts</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">50%</div>
+                  <div class="stat-label">Faster Fulfillment</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="key-features section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Key Features</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-boxes"></i>
+            </div>
+            <h3 class="h4 mb-3">Inventory Management</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Real-time stock tracking</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Multi-warehouse support</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Batch & expiry tracking</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Serial number tracking</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Stock movement history</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-barcode"></i>
+            </div>
+            <h3 class="h4 mb-3">Barcode Scanning</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Barcode generation</li>
+              <li><i class="fas fa-check text-primary me-2"></i>QR code support</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Mobile scanning app</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Batch scanning</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Label printing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3 class="h4 mb-3">Order Management</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Purchase orders</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Sales orders</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Transfer orders</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Pick & pack workflows</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Shipping integration</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="h4 mb-3">Reports & Analytics</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Stock level reports</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Inventory valuation</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Slow-moving items</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Reorder point alerts</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Demand forecasting</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3 class="h4 mb-3">Supplier Management</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Supplier database</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Purchase history</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Lead time tracking</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Supplier performance</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Automated reordering</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bell"></i>
+            </div>
+            <h3 class="h4 mb-3">Alerts & Notifications</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Low stock alerts</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Expiry notifications</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Reorder reminders</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Email notifications</li>
+              <li><i class="fas fa-check text-primary me-2"></i>SMS alerts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack -->
+  <section class="tech-stack section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Technology Stack</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="tech-grid">
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
+              <i class="fab fa-laravel"></i>
+              <span>Laravel 10</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="150">
+              <i class="fab fa-vuejs"></i>
+              <span>Vue.js 3</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fas fa-database"></i>
+              <span>PostgreSQL</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="250">
+              <i class="fab fa-node"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fas fa-bolt"></i>
+              <span>Redis</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="350">
+              <i class="fas fa-code"></i>
+              <span>WebSocket</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
+              <i class="fas fa-chart-pie"></i>
+              <span>Chart.js</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="450">
+              <i class="fas fa-cloud"></i>
+              <span>AWS</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="500">
+              <i class="fab fa-docker"></i>
+              <span>Docker</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="550">
+              <i class="fab fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- System Architecture -->
+  <section class="system-architecture section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">System Architecture</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="architecture-diagram">
+            <div class="arch-box frontend">
+              <i class="fab fa-vuejs"></i>
+              <h4>Frontend</h4>
+              <p>Vue.js SPA<br>Vuex State<br>WebSocket Client</p>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="arch-box api">
+              <i class="fas fa-code-branch"></i>
+              <h4>API Gateway</h4>
+              <p>RESTful API<br>WebSocket Server<br>Authentication</p>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="arch-box backend">
+              <i class="fab fa-laravel"></i>
+              <h4>Backend Services</h4>
+              <p>Laravel<br>Business Logic<br>Queue Workers</p>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="arch-box database">
+              <i class="fas fa-database"></i>
+              <h4>Data Layer</h4>
+              <p>PostgreSQL<br>Redis Cache<br>Elasticsearch</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="architecture-content">
+            <h3 class="h4 mb-3">Real-time Architecture</h3>
+            <p>The Warehouse Management System uses a modern stack with real-time updates via WebSocket connections, ensuring all users see inventory changes instantly across all warehouse locations.</p>
+            <ul class="arch-list mt-4">
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Real-time Updates:</strong> WebSocket connections for instant inventory changes</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Microservices:</strong> Separate services for inventory, orders, and reporting</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Caching:</strong> Redis for frequently accessed data and session management</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Queue System:</strong> Background processing for report generation and notifications</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Scalability:</strong> Horizontal scaling support for growing warehouses</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Database Schema -->
+  <section class="database-schema section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Database Schema</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="schema-diagram" data-aos="fade-up">
+            <pre class="schema-code"><code>
+-- Main Tables Structure
+warehouses
+  ├── id (PK)
+  ├── code (unique)
+  ├── name
+  ├── location
+  ├── capacity
+  ├── manager_id (FK)
+  └── status
+
+products
+  ├── id (PK)
+  ├── sku (unique)
+  ├── name
+  ├── description
+  ├── category_id (FK)
+  ├── unit_price
+  ├── reorder_level
+  ├── image_url
+  └── created_at
+
+inventory
+  ├── id (PK)
+  ├── product_id (FK)
+  ├── warehouse_id (FK)
+  ├── quantity
+  ├── reserved_quantity
+  ├── available_quantity
+  ├── bin_location
+  ├── batch_number
+  ├── expiry_date
+  └── last_counted_at
+
+stock_movements
+  ├── id (PK)
+  ├── product_id (FK)
+  ├── from_location
+  ├── to_location
+  ├── quantity
+  ├── type (in/out/transfer)
+  ├── reference_type (PO/SO/TO)
+  ├── reference_id
+  ├── created_by (FK)
+  └── created_at
+
+orders
+  ├── id (PK)
+  ├── order_number (unique)
+  ├── type (PO/SO/TO)
+  ├── status
+  ├── supplier_id/customer_id (FK)
+  ├── order_date
+  ├── expected_date
+  ├── completed_date
+  └── total_amount
+
+order_items
+  ├── id (PK)
+  ├── order_id (FK)
+  ├── product_id (FK)
+  ├── quantity
+  ├── unit_price
+  ├── total_price
+  └── status
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots/Gallery -->
+  <section class="project-gallery section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">System Screenshots</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Dashboard" alt="Dashboard" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Dashboard</h5>
+              <p>Real-time inventory overview</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Inventory+List" alt="Inventory List" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Inventory Management</h5>
+              <p>Complete product catalog</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Barcode+Scanning" alt="Barcode Scanning" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Barcode Scanning</h5>
+              <p>Mobile scanning interface</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Warehouse+Map" alt="Warehouse Map" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Warehouse Layout</h5>
+              <p>Visual bin location mapping</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Reports" alt="Reports" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Analytics Dashboard</h5>
+              <p>Inventory insights and trends</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Order+Management" alt="Order Management" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Order Processing</h5>
+              <p>Pick, pack, and ship workflow</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Case Scenarios -->
+  <section class="use-cases section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Use Case Scenarios</h2>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="use-case-timeline">
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="use-case-icon">
+                <i class="fas fa-truck-loading"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Receiving New Inventory</h3>
+                <p>When new stock arrives, warehouse staff scan barcodes to update inventory in real-time. The system automatically updates quantities, checks against purchase orders, and generates receiving reports.</p>
+              </div>
+            </div>
+            
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="use-case-icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Cycle Counting</h3>
+                <p>During inventory audits, staff use mobile devices to scan and count items. The system tracks discrepancies, adjusts inventory levels, and maintains audit trails for compliance.</p>
+              </div>
+            </div>
+            
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="use-case-icon">
+                <i class="fas fa-box-open"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Order Fulfillment</h3>
+                <p>When orders come in, the system suggests optimal picking routes, reserves inventory, and guides staff through the picking process. Updates are reflected instantly across all warehouse locations.</p>
+              </div>
+            </div>
+            
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="use-case-icon">
+                <i class="fas fa-exchange-alt"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Stock Transfers</h3>
+                <p>When moving items between warehouses, staff create transfer orders. The system tracks the entire process, from picking at source warehouse to receiving at destination, maintaining accurate stock levels throughout.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges & Solutions -->
+  <section class="challenges section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Challenges & Solutions</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="challenge-list">
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Real-time Synchronization</h3>
+              </div>
+              <p>Keeping inventory levels synchronized across multiple warehouses and users in real-time was challenging. Implemented WebSocket connections with Laravel Echo and Redis for instant updates, ensuring all users see accurate stock levels simultaneously.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Barcode Scanning Performance</h3>
+              </div>
+              <p>Processing hundreds of barcode scans per minute required optimization. Implemented batch processing, optimized database queries, and used Redis for temporary storage before bulk database updates.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Complex Reporting</h3>
+              </div>
+              <p>Generating reports with large datasets was slow. Implemented materialized views, optimized database indexes, and created a separate reporting database with ETL processes for faster query performance.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Offline Capability</h3>
+              </div>
+              <p>Warehouse areas with poor connectivity needed offline functionality. Implemented Progressive Web App (PWA) features with local storage sync, allowing staff to continue working offline and sync when connection is restored.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Client Feedback</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="testimonial-card" data-aos="fade-up">
+            <i class="fas fa-quote-left fa-3x text-primary mb-3"></i>
+            <p class="lead mb-4">"This warehouse management system has transformed our operations. We've eliminated inventory discrepancies, reduced picking errors by 90%, and can now handle double the order volume with the same staff. The real-time updates are a game-changer."</p>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/60x60/1e293b/38bdf8?text=MS" alt="Client" class="rounded-circle">
+              <div>
+                <h5 class="mb-1">Maria Santos</h5>
+                <p class="text-muted">Operations Director, Metro Logistics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI Calculator Preview -->
+  <section class="roi-section section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">ROI Calculator</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="roi-card" data-aos="fade-up">
+            <p class="text-center mb-4">See how much you could save with this system</p>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Monthly Orders</label>
+                <input type="number" class="form-control" value="1000" id="monthlyOrders">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Avg. Order Value</label>
+                <input type="number" class="form-control" value="100" id="orderValue">
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary w-100" onclick="calculateROI()">Calculate Savings</button>
+              </div>
+            </div>
+            <div id="roiResult" class="mt-4 text-center" style="display: none;">
+              <h4 class="text-primary">Estimated Annual Savings</h4>
+              <h2 class="display-4" id="savingsAmount">$0</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Projects -->
+  <section class="related-projects section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Related Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">HR Management System</h3>
+              <p class="mb-3">Employee and payroll management</p>
+              <a href="hrms.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">Savings & Borrowing</h3>
+              <p class="mb-3">Financial platform for cooperatives</p>
+              <a href="savings-borrowing.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">POS & Inventory</h3>
+              <p class="mb-3">Point of sale system</p>
+              <a href="pos-inventory.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content text-center">
+        <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Optimize Your Warehouse Operations</h2>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Let's discuss how this system can be customized for your business needs.</p>
+        <a href="index.html#contact" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="200">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2024 Ronel O. Patayon. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ROI Calculator Script -->
+  <script>
+    function calculateROI() {
+      const monthlyOrders = document.getElementById('monthlyOrders').value;
+      const orderValue = document.getElementById('orderValue').value;
+      
+      // Assumptions:
+      // - 5% reduction in errors
+      // - 20% improvement in efficiency
+      // - 10% reduction in stockouts
+      
+      const errorSavings = monthlyOrders * orderValue * 0.05 * 12;
+      const efficiencySavings = monthlyOrders * 10 * 12; // $10 saved per order
+      const stockoutSavings = monthlyOrders * orderValue * 0.10 * 12 * 0.3; // 30% of stockout value
+      
+      const totalSavings = errorSavings + efficiencySavings + stockoutSavings;
+      
+      document.getElementById('savingsAmount').textContent = '$' + totalSavings.toLocaleString();
+      document.getElementById('roiResult').style.display = 'block';
+      
+      // Smooth scroll to result
+      document.getElementById('roiResult').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/project-detail.js"></script>
+</body>
+</html>
