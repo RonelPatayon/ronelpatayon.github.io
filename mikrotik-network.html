@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MikroTik Network Setup | Ronel O. Patayon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enterprise network infrastructure with MikroTik routers featuring VLANs, multi-ISP load balancing, failover configuration, and advanced security">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6.4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Prism.js for code highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html">Ronel Patayon</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link theme-toggle" href="#" id="theme-toggle">
+              <i class="fa-solid fa-moon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Hero Section -->
+  <section class="project-hero">
+    <div class="container">
+      <div class="row align-items-center min-vh-50 py-5">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="project-badge mb-4">
+            <span class="badge bg-primary me-2">MikroTik</span>
+            <span class="badge bg-primary me-2">VLAN</span>
+            <span class="badge bg-primary me-2">Load Balancing</span>
+            <span class="badge bg-primary">Firewall</span>
+          </div>
+          <h1 class="display-3 fw-bold mb-3">MikroTik Network Infrastructure</h1>
+          <p class="lead mb-4">Enterprise-grade network setup featuring VLAN segmentation, multi-ISP load balancing, automatic failover, firewall security, and comprehensive network monitoring for a 200+ user organization.</p>
+          <div class="project-links">
+            <a href="#" class="btn btn-primary btn-lg me-3"><i class="fas fa-network-wired me-2"></i>Network Diagram</a>
+            <a href="#" class="btn btn-outline-primary btn-lg"><i class="fas fa-download me-2"></i>Configuration Files</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="project-overview section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title" data-aos="fade-up">Project Overview</h2>
+          <div class="overview-content" data-aos="fade-up" data-aos-delay="100">
+            <p class="lead">This project involved designing and implementing a complete network infrastructure for a medium-sized enterprise using MikroTik RouterOS. The solution provides high availability through dual ISP connections, network segmentation via VLANs, robust security through firewall rules, and quality of service for critical applications.</p>
+            
+            <div class="row mt-5">
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">200+</div>
+                  <div class="stat-label">Users Supported</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">99.99%</div>
+                  <div class="stat-label">Uptime</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">8</div>
+                  <div class="stat-label">VLANs</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">2</div>
+                  <div class="stat-label">ISP Links</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Network Topology Diagram -->
+  <section class="network-topology section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Network Topology</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="topology-container" data-aos="fade-up">
+            <div class="topology-diagram">
+              <!-- ISP Section -->
+              <div class="topology-row isp-row">
+                <div class="isp-box">
+                  <i class="fas fa-satellite-dish"></i>
+                  <span>ISP 1</span>
+                  <small>Fiber 100 Mbps</small>
+                </div>
+                <div class="isp-box">
+                  <i class="fas fa-wifi"></i>
+                  <span>ISP 2</span>
+                  <small>DSL 50 Mbps</small>
+                </div>
+              </div>
+
+              <!-- Router Section -->
+              <div class="topology-arrow-down">
+                <i class="fas fa-arrow-down"></i>
+              </div>
+
+              <div class="router-box">
+                <i class="fas fa-server"></i>
+                <span>MikroTik CCR1009</span>
+                <small>RouterOS v7.6</small>
+                <div class="router-features">
+                  <span>Load Balancing</span>
+                  <span>Failover</span>
+                  <span>Firewall</span>
+                </div>
+              </div>
+
+              <!-- Switch Section -->
+              <div class="topology-arrow-down">
+                <i class="fas fa-arrow-down"></i>
+              </div>
+
+              <div class="switch-box">
+                <i class="fas fa-project-diagram"></i>
+                <span>MikroTik CRS326</span>
+                <small>24-port Gigabit Switch</small>
+              </div>
+
+              <!-- VLAN Section -->
+              <div class="topology-arrow-down">
+                <i class="fas fa-arrow-down"></i>
+              </div>
+
+              <div class="vlan-grid">
+                <div class="vlan-box" data-aos="fade-up" data-aos-delay="100">
+                  <div class="vlan-header management">
+                    <span class="vlan-tag">VLAN 10</span>
+                  </div>
+                  <i class="fas fa-user-tie"></i>
+                  <h4>Management</h4>
+                  <p>192.168.10.0/24</p>
+                  <small>IT Department</small>
+                </div>
+
+                <div class="vlan-box" data-aos="fade-up" data-aos-delay="150">
+                  <div class="vlan-header employees">
+                    <span class="vlan-tag">VLAN 20</span>
+                  </div>
+                  <i class="fas fa-users"></i>
+                  <h4>Employees</h4>
+                  <p>192.168.20.0/24</p>
+                  <small>Staff Network</small>
+                </div>
+
+                <div class="vlan-box" data-aos="fade-up" data-aos-delay="200">
+                  <div class="vlan-header guest">
+                    <span class="vlan-tag">VLAN 30</span>
+                  </div>
+                  <i class="fas fa-user-friends"></i>
+                  <h4>Guest WiFi</h4>
+                  <p>192.168.30.0/24</p>
+                  <small>Internet Only</small>
+                </div>
+
+                <div class="vlan-box" data-aos="fade-up" data-aos-delay="250">
+                  <div class="vlan-header servers">
+                    <span class="vlan-tag">VLAN 40</span>
+                  </div>
+                  <i class="fas fa-database"></i>
+                  <h4>Servers</h4>
+                  <p>192.168.40.0/24</p>
+                  <small>Data Center</small>
+                </div>
+
+                <div class="vlan-box" data-aos="fade-up" data-aos-delay="300">
+                  <div class="vlan-header voip">
+                    <span class="vlan-tag">VLAN 50</span>
+                  </div>
+                  <i class="fas fa-phone"></i>
+                  <h4>VoIP</h4>
+                  <p>192.168.50.0/24</p>
+                  <small>IP Phones</small>
+                </div>
+
+                <div class="vlan-box" data-aos="fade-up" data-aos-delay="350">
+                  <div class="vlan-header iot">
+                    <span class="vlan-tag">VLAN 60</span>
+                  </div>
+                  <i class="fas fa-microchip"></i>
+                  <h4>IoT Devices</h4>
+                  <p>192.168.60.0/24</p>
+                  <small>CCTV, Sensors</small>
+                </div>
+
+                <div class="vlan-box" data-aos="fade-up" data-aos-delay="400">
+                  <div class="vlan-header dmz">
+                    <span class="vlan-tag">VLAN 70</span>
+                  </div>
+                  <i class="fas fa-shield-alt"></i>
+                  <h4>DMZ</h4>
+                  <p>192.168.70.0/24</p>
+                  <small>Public Services</small>
+                </div>
+
+                <div class="vlan-box" data-aos="fade-up" data-aos-delay="450">
+                  <div class="vlan-header dev">
+                    <span class="vlan-tag">VLAN 80</span>
+                  </div>
+                  <i class="fas fa-code"></i>
+                  <h4>Development</h4>
+                  <p>192.168.80.0/24</p>
+                  <small>Dev/Test</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="key-features section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Key Features</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <h3 class="h4 mb-3">Multi-ISP Load Balancing</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>PCC (Per Connection Classifier) load balancing</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Automatic failover detection</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Bandwidth aggregation</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Link health monitoring</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Recovery notification</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <h3 class="h4 mb-3">VLAN Segmentation</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>8 isolated VLANs</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Inter-VLAN routing control</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Broadcast domain separation</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Q-in-Q tagging support</li>
+              <li><i class="fas fa-check text-primary me-2"></i>VLAN trunking</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="h4 mb-3">Firewall Security</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Stateful packet inspection</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Layer-7 protocol filtering</li>
+              <li><i class="fas fa-check text-primary me-2"></i>DDoS protection</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Port knocking</li>
+              <li><i class="fas fa-check text-primary me-2"></i>SSH/HTTPS hardening</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="h4 mb-3">QoS & Bandwidth Management</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Simple queues per IP</li>
+              <li><i class="fas fa-check text-primary me-2"></i>PCQ for dynamic shaping</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Priority queuing for VoIP</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Burst limit control</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Traffic shaping graphs</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3 class="h4 mb-3">Monitoring & Logging</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>The Dude monitoring integration</li>
+              <li><i class="fas fa-check text-primary me-2"></i>SNMP v3 with Grafana</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Syslog remote logging</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Email/SMS alerts</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Traffic accounting</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-vpn-globe"></i>
+            </div>
+            <h3 class="h4 mb-3">VPN Services</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>IPsec site-to-site VPN</li>
+              <li><i class="fas fa-check text-primary me-2"></i>OpenVPN remote access</li>
+              <li><i class="fas fa-check text-primary me-2"></i>L2TP with IPsec</li>
+              <li><i class="fas fa-check text-primary me-2"></i>PPTP for legacy devices</li>
+              <li><i class="fas fa-check text-primary me-2"></i>WireGuard for performance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Configuration Examples -->
+  <section class="configuration section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">RouterOS Configuration</h2>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="config-tabs" data-aos="fade-up">
+            <ul class="nav nav-tabs" id="configTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="vlan-tab" data-bs-toggle="tab" data-bs-target="#vlan" type="button" role="tab">VLAN Setup</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="loadbalancing-tab" data-bs-toggle="tab" data-bs-target="#loadbalancing" type="button" role="tab">Load Balancing</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="firewall-tab" data-bs-toggle="tab" data-bs-target="#firewall" type="button" role="tab">Firewall Rules</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="dhcp-tab" data-bs-toggle="tab" data-bs-target="#dhcp" type="button" role="tab">DHCP Server</button>
+              </li>
+            </ul>
+            
+            <div class="tab-content config-content" id="configTabsContent">
+              <!-- VLAN Configuration -->
+              <div class="tab-pane fade show active" id="vlan" role="tabpanel">
+                <pre><code class="language-routeros"># VLAN Configuration on MikroTik
+
+# Create VLAN interfaces on bridge
+/interface vlan
+add interface=bridge1 name=vlan10 vlan-id=10
+add interface=bridge1 name=vlan20 vlan-id=20
+add interface=bridge1 name=vlan30 vlan-id=30
+add interface=bridge1 name=vlan40 vlan-id=40
+add interface=bridge1 name=vlan50 vlan-id=50
+add interface=bridge1 name=vlan60 vlan-id=60
+add interface=bridge1 name=vlan70 vlan-id=70
+add interface=bridge1 name=vlan80 vlan-id=80
+
+# Assign IP addresses to VLANs
+/ip address
+add address=192.168.10.1/24 interface=vlan10 network=192.168.10.0
+add address=192.168.20.1/24 interface=vlan20 network=192.168.20.0
+add address=192.168.30.1/24 interface=vlan30 network=192.168.30.0
+add address=192.168.40.1/24 interface=vlan40 network=192.168.40.0
+add address=192.168.50.1/24 interface=vlan50 network=192.168.50.0
+add address=192.168.60.1/24 interface=vlan60 network=192.168.60.0
+add address=192.168.70.1/24 interface=vlan70 network=192.168.70.0
+add address=192.168.80.1/24 interface=vlan80 network=192.168.80.0
+
+# Configure trunk port on switch
+/interface bridge vlan
+add bridge=bridge1 tagged=ether1,ether2 vlan-ids=10,20,30,40,50,60,70,80</code></pre>
+              </div>
+              
+              <!-- Load Balancing Configuration -->
+              <div class="tab-pane fade" id="loadbalancing" role="tabpanel">
+                <pre><code class="language-routeros"># PCC Load Balancing with Failover
+
+# Mark connections from each ISP
+/ip firewall mangle
+add chain=prerouting in-interface=isp1 action=mark-connection \
+    new-connection-mark=isp1_conn
+add chain=prerouting in-interface=isp2 action=mark-connection \
+    new-connection-mark=isp2_conn
+
+# PCC load balancing for outgoing traffic
+add chain=prerouting dst-address-type=!local in-interface=lan \
+    action=mark-connection new-connection-mark=isp1_conn \
+    per-connection-classifier=both-addresses:2/0
+add chain=prerouting dst-address-type=!local in-interface=lan \
+    action=mark-connection new-connection-mark=isp2_conn \
+    per-connection-classifier=both-addresses:2/1
+
+# Mark routing for marked connections
+add chain=prerouting connection-mark=isp1_conn in-interface=lan \
+    action=mark-routing new-routing-mark=to_isp1
+add chain=prerouting connection-mark=isp2_conn in-interface=lan \
+    action=mark-routing new-routing-mark=to_isp2
+
+# Add gateway routes with distance for failover
+/ip route
+add gateway=1.1.1.1 routing-mark=to_isp1 distance=1
+add gateway=2.2.2.2 routing-mark=to_isp2 distance=1
+add gateway=1.1.1.1 distance=1
+add gateway=2.2.2.2 distance=2
+
+# Netwatch for failover detection
+/tool netwatch
+add host=8.8.8.8 interval=30s down-script="/ip route set [find gateway=1.1.1.1] disabled=yes" \
+    up-script="/ip route set [find gateway=1.1.1.1] disabled=no"</code></pre>
+              </div>
+              
+              <!-- Firewall Rules -->
+              <div class="tab-pane fade" id="firewall" role="tabpanel">
+                <pre><code class="language-routeros"># Firewall Security Rules
+
+# Drop invalid connections
+/ip firewall filter
+add chain=input connection-state=invalid action=drop
+add chain=forward connection-state=invalid action=drop
+
+# Allow established/related connections
+add chain=input connection-state=established,related action=accept
+add chain=forward connection-state=established,related action=accept
+
+# Allow ICMP (ping)
+add chain=input protocol=icmp action=accept
+
+# Allow specific services from management VLAN only
+add chain=input protocol=tcp dst-port=22 src-address=192.168.10.0/24 action=accept
+add chain=input protocol=tcp dst-port=8291 src-address=192.168.10.0/24 action=accept
+
+# Inter-VLAN firewall rules
+add chain=forward src-address=192.168.30.0/24 dst-address=192.168.10.0/24 \
+    action=drop log=yes comment="Block guest to management"
+add chain=forward src-address=192.168.60.0/24 dst-address=192.168.40.0/24 \
+    action=drop comment="Block IoT to servers"
+
+# Allow specific inter-VLAN communication
+add chain=forward src-address=192.168.20.0/24 dst-address=192.168.40.0/24 \
+    protocol=tcp dst-port=80,443 action=accept comment="Employees to web servers"
+
+# Drop everything else
+add chain=input action=drop
+add chain=forward action=drop</code></pre>
+              </div>
+              
+              <!-- DHCP Configuration -->
+              <div class="tab-pane fade" id="dhcp" role="tabpanel">
+                <pre><code class="language-routeros"># DHCP Server Setup per VLAN
+
+# Create DHCP pools
+/ip pool
+add name=dhcp_pool_vlan10 ranges=192.168.10.100-192.168.10.200
+add name=dhcp_pool_vlan20 ranges=192.168.20.100-192.168.20.200
+add name=dhcp_pool_vlan30 ranges=192.168.30.100-192.168.30.200
+
+# Configure DHCP networks
+/ip dhcp-server network
+add address=192.168.10.0/24 gateway=192.168.10.1 dns-server=8.8.8.8,8.8.4.4
+add address=192.168.20.0/24 gateway=192.168.20.1 dns-server=8.8.8.8,8.8.4.4
+add address=192.168.30.0/24 gateway=192.168.30.1 dns-server=8.8.8.8,8.8.4.4
+
+# Enable DHCP servers on VLAN interfaces
+/ip dhcp-server
+add interface=vlan10 address-pool=dhcp_pool_vlan10 name=dhcp_vlan10
+add interface=vlan20 address-pool=dhcp_pool_vlan20 name=dhcp_vlan20
+add interface=vlan30 address-pool=dhcp_pool_vlan30 name=dhcp_vlan30
+
+# DHCP leases (static assignments for servers)
+/ip dhcp-server lease
+add address=192.168.40.10 mac-address=AA:BB:CC:DD:EE:FF \
+    server=dhcp_vlan40 comment="Web Server"
+add address=192.168.40.20 mac-address=11:22:33:44:55:66 \
+    server=dhcp_vlan40 comment="Database Server"</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardware Setup -->
+  <section class="hardware-section section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Hardware Used</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="hardware-card">
+            <div class="hardware-image">
+              <i class="fas fa-server fa-4x text-primary"></i>
+            </div>
+            <h3 class="h4 mb-3">MikroTik CCR1009</h3>
+            <p class="mb-3">Core Router with 9-core CPU, 9 Gigabit ports, and hardware acceleration</p>
+            <ul class="hardware-specs">
+              <li><i class="fas fa-microchip"></i> 9-core 1.2GHz CPU</li>
+              <li><i class="fas fa-memory"></i> 2GB RAM</li>
+              <li><i class="fas fa-ethernet"></i> 9x Gigabit ports</li>
+              <li><i class="fas fa-tachometer-alt"></i> 6.5 Gbps throughput</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="hardware-card">
+            <div class="hardware-image">
+              <i class="fas fa-project-diagram fa-4x text-primary"></i>
+            </div>
+            <h3 class="h4 mb-3">MikroTik CRS326</h3>
+            <p class="mb-3">24-port Gigabit switch with PoE support for access points and cameras</p>
+            <ul class="hardware-specs">
+              <li><i class="fas fa-plug"></i> 24x Gigabit ports</li>
+              <li><i class="fas fa-bolt"></i> PoE output on 8 ports</li>
+              <li><i class="fas fa-layer-group"></i> Layer 3 hardware offload</li>
+              <li><i class="fas fa-fan"></i> Fanless design</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="hardware-card">
+            <div class="hardware-image">
+              <i class="fas fa-wifi fa-4x text-primary"></i>
+            </div>
+            <h3 class="h4 mb-3">MikroTik cAP AC</h3>
+            <p class="mb-3">Dual-band wireless access points for office and guest networks</p>
+            <ul class="hardware-specs">
+              <li><i class="fas fa-wifi"></i> Dual-band 2.4/5GHz</li>
+              <li><i class="fas fa-tachometer-alt"></i> 867 Mbps throughput</li>
+              <li><i class="fas fa-plug"></i> 802.3af/at PoE</li>
+              <li><i class="fas fa-users"></i> 50+ concurrent clients</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Network Monitoring -->
+  <section class="monitoring-section section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Network Monitoring</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="monitoring-content">
+            <h3 class="h4 mb-3">The Dude Monitoring System</h3>
+            <p>Integrated The Dude network monitor for real-time visualization and alerts of all network devices.</p>
+            
+            <div class="monitoring-features mt-4">
+              <div class="monitor-item">
+                <i class="fas fa-check-circle text-primary"></i>
+                <div>
+                  <h5>Auto-discovery</h5>
+                  <p>Automatically detects all network devices and creates topology maps</p>
+                </div>
+              </div>
+              
+              <div class="monitor-item">
+                <i class="fas fa-check-circle text-primary"></i>
+                <div>
+                  <h5>SNMP Monitoring</h5>
+                  <p>Collects bandwidth, CPU, memory, and interface statistics</p>
+                </div>
+              </div>
+              
+              <div class="monitor-item">
+                <i class="fas fa-check-circle text-primary"></i>
+                <div>
+                  <h5>Alert System</h5>
+                  <p>Email and SMS alerts for device down, high utilization, and security events</p>
+                </div>
+              </div>
+              
+              <div class="monitor-item">
+                <i class="fas fa-check-circle text-primary"></i>
+                <div>
+                  <h5>Grafana Dashboards</h5>
+                  <p>Beautiful visualizations of network performance metrics</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="monitoring-stats">
+            <div class="stat-box">
+              <div class="stat-value">48</div>
+              <div class="stat-label">Monitored Devices</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value">99.9%</div>
+              <div class="stat-label">Average Uptime</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value">< 5min</div>
+              <div class="stat-label">Alert Response</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security Implementation -->
+  <section class="security-section section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Security Implementation</h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="security-card">
+            <i class="fas fa-shield-virus fa-2x text-primary mb-3"></i>
+            <h3 class="h5 mb-3">DDoS Protection</h3>
+            <ul>
+              <li>SYN flood protection with SYN cookies</li>
+              <li>ICMP rate limiting (10 packets per second)</li>
+              <li>Port scan detection and blocking</li>
+              <li>Connection tracking limits per IP</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="security-card">
+            <i class="fas fa-lock fa-2x text-primary mb-3"></i>
+            <h3 class="h5 mb-3">Access Control</h3>
+            <ul>
+              <li>SSH key-based authentication only</li>
+              <li>HTTPS with strong ciphers for WinBox</li>
+              <li>Management access restricted to VLAN 10</li>
+              <li>Port knocking for admin access</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="security-card">
+            <i class="fas fa-filter fa-2x text-primary mb-3"></i>
+            <h3 class="h5 mb-3">Layer 7 Filtering</h3>
+            <ul>
+              <li>Block peer-to-peer file sharing</li>
+              <li>Social media restrictions during work hours</li>
+              <li>Streaming media bandwidth limits</li>
+              <li>Malware domain blocking</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="security-card">
+            <i class="fas fa-clipboard-check fa-2x text-primary mb-3"></i>
+            <h3 class="h5 mb-3">Audit & Compliance</h3>
+            <ul>
+              <li>Comprehensive logging to remote syslog</li>
+              <li>Monthly security audit reports</li>
+              <li>Configuration backup automation</li>
+              <li>User activity logging</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bandwidth Graphs -->
+  <section class="bandwidth-section section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Bandwidth Graphs</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="graph-card">
+            <h3 class="h5 mb-3">ISP 1 (Fiber 100 Mbps)</h3>
+            <div class="graph-placeholder">
+              <canvas id="isp1Graph"></canvas>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="graph-card">
+            <h3 class="h5 mb-3">ISP 2 (DSL 50 Mbps)</h3>
+            <div class="graph-placeholder">
+              <canvas id="isp2Graph"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges & Solutions -->
+  <section class="challenges section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Challenges & Solutions</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="challenge-list">
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Uneven Load Distribution</h3>
+              </div>
+              <p>Initial PCC load balancing caused uneven distribution due to different ISP speeds. Implemented weighted PCC with connection marking based on bandwidth ratios (2:1 for Fiber:DSL).</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Broadcast Storms</h3>
+              </div>
+              <p>Initial VLAN configuration caused broadcast loops. Implemented proper bridge VLAN filtering and RSTP to prevent loops and isolate broadcast domains.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">VPN Performance</h3>
+              </div>
+              <p>IPsec VPN had high CPU usage. Migrated to WireGuard for remote access and hardware-accelerated IPsec for site-to-site connections.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">QoS for VoIP</h3>
+              </div>
+              <p>Voice quality issues during peak hours. Implemented dedicated VLAN for VoIP with strict priority queuing and bandwidth reservation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Client Feedback</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="testimonial-card" data-aos="fade-up">
+            <i class="fas fa-quote-left fa-3x text-primary mb-3"></i>
+            <p class="lead mb-4">"Ronel designed and implemented our entire network infrastructure from scratch. The MikroTik setup with dual ISPs has been rock solid for over two years with zero unplanned downtime. The VLAN segmentation improved our security and network performance dramatically."</p>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/60x60/1e293b/38bdf8?text=RJ" alt="Client" class="rounded-circle">
+              <div>
+                <h5 class="mb-1">Robert Javier</h5>
+                <p class="text-muted">CTO, TechHub Solutions Inc.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Network Diagram Download -->
+  <section class="diagram-download section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="download-card" data-aos="fade-up">
+            <i class="fas fa-file-alt fa-3x text-primary mb-3"></i>
+            <h3 class="h4 mb-3">Complete Network Documentation</h3>
+            <p class="mb-4">Download the full network diagram, configuration files, and implementation guide.</p>
+            <div class="download-buttons">
+              <a href="#" class="btn btn-primary me-3"><i class="fas fa-download me-2"></i>Network Diagram (PDF)</a>
+              <a href="#" class="btn btn-outline-primary"><i class="fas fa-code me-2"></i>Config Backup</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Projects -->
+  <section class="related-projects section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Related Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">Fleet Management System</h3>
+              <p class="mb-3">Vehicle tracking and management</p>
+              <a href="fleet-management.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">Warehouse & Inventory</h3>
+              <p class="mb-3">Inventory tracking system</p>
+              <a href="warehouse.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">HR Management System</h3>
+              <p class="mb-3">Employee and payroll management</p>
+              <a href="hrms.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content text-center">
+        <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Need a Robust Network Infrastructure?</h2>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Let's design and implement a secure, high-performance network for your organization.</p>
+        <a href="index.html#contact" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="200">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2024 Ronel O. Patayon. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/project-detail.js"></script>
+  
+  <!-- Chart.js Graphs -->
+  <script>
+    // ISP 1 Bandwidth Graph
+    const ctx1 = document.getElementById('isp1Graph').getContext('2d');
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['00:00', '02:00', '04:00', '06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'],
+        datasets: [{
+          label: 'Download (Mbps)',
+          data: [25, 15, 10, 20, 65, 85, 95, 90, 75, 70, 55, 35],
+          borderColor: '#38bdf8',
+          backgroundColor: 'rgba(56, 189, 248, 0.1)',
+          tension: 0.4,
+          fill: true
+        }, {
+          label: 'Upload (Mbps)',
+          data: [8, 5, 4, 7, 15, 25, 30, 28, 22, 20, 18, 12],
+          borderColor: '#10b981',
+          backgroundColor: 'rgba(16, 185, 129, 0.1)',
+          tension: 0.4,
+          fill: true
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            labels: { color: '#e5e7eb' }
+          }
+        },
+        scales: {
+          y: {
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            ticks: { color: '#e5e7eb' }
+          },
+          x: {
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            ticks: { color: '#e5e7eb' }
+          }
+        }
+      }
+    });
+
+    // ISP 2 Bandwidth Graph
+    const ctx2 = document.getElementById('isp2Graph').getContext('2d');
+    new Chart(ctx2, {
+      type: 'line',
+      data: {
+        labels: ['00:00', '02:00', '04:00', '06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'],
+        datasets: [{
+          label: 'Download (Mbps)',
+          data: [15, 8, 5, 12, 35, 45, 48, 42, 38, 32, 25, 18],
+          borderColor: '#38bdf8',
+          backgroundColor: 'rgba(56, 189, 248, 0.1)',
+          tension: 0.4,
+          fill: true
+        }, {
+          label: 'Upload (Mbps)',
+          data: [5, 3, 2, 4, 8, 12, 15, 14, 10, 9, 7, 5],
+          borderColor: '#10b981',
+          backgroundColor: 'rgba(16, 185, 129, 0.1)',
+          tension: 0.4,
+          fill: true
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            labels: { color: '#e5e7eb' }
+          }
+        },
+        scales: {
+          y: {
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            ticks: { color: '#e5e7eb' }
+          },
+          x: {
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            ticks: { color: '#e5e7eb' }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
