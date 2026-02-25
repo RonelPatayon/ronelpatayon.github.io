@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fleet Journey Management System | Ronel O. Patayon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Real-time vehicle trip tracking system with Google Maps integration, departure/arrival checklists, and comprehensive fleet management">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6.4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html">Ronel Patayon</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link theme-toggle" href="#" id="theme-toggle">
+              <i class="fa-solid fa-moon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Hero Section -->
+  <section class="project-hero">
+    <div class="container">
+      <div class="row align-items-center min-vh-50 py-5">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="project-badge mb-4">
+            <span class="badge bg-primary me-2">Real-time Tracking</span>
+            <span class="badge bg-primary me-2">Google Maps</span>
+            <span class="badge bg-primary">Fleet Management</span>
+          </div>
+          <h1 class="display-3 fw-bold mb-3">Fleet Journey Management System</h1>
+          <p class="lead mb-4">A comprehensive vehicle trip tracking and ticketing application that monitors company vehicles from departure to arrival stages. Features real-time tracking, departure/arrival checklists, and complete trip lifecycle management.</p>
+          <div class="project-links">
+            <a href="#" class="btn btn-primary btn-lg me-3"><i class="fas fa-eye me-2"></i>Live Demo</a>
+            <a href="#" class="btn btn-outline-primary btn-lg"><i class="fab fa-github me-2"></i>Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="project-overview section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title" data-aos="fade-up">Project Overview</h2>
+          <div class="overview-content" data-aos="fade-up" data-aos-delay="100">
+            <p class="lead">The Fleet Journey Management System was developed to provide complete visibility and control over company vehicle operations. It enables real-time tracking of trips from departure to arrival, enforces safety checklists, and maintains comprehensive records of all journeys, drivers, and vehicles.</p>
+            
+            <div class="row mt-5">
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">500+</div>
+                  <div class="stat-label">Daily Trips</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">100+</div>
+                  <div class="stat-label">Fleet Vehicles</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">99.9%</div>
+                  <div class="stat-label">Tracking Accuracy</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">40%</div>
+                  <div class="stat-label">Fuel Savings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trip Status Timeline -->
+  <section class="trip-timeline section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Trip Lifecycle</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="status-timeline">
+            <div class="status-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="status-icon departure">
+                <i class="fas fa-plane-departure"></i>
+              </div>
+              <div class="status-content">
+                <h3 class="h4 mb-3">Departure Stage</h3>
+                <p>Pre-trip vehicle inspection, driver verification, and departure checklist completion</p>
+              </div>
+            </div>
+            <div class="status-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="status-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="status-icon traveling">
+                <i class="fas fa-truck"></i>
+              </div>
+              <div class="status-content">
+                <h3 class="h4 mb-3">Traveling Stage</h3>
+                <p>Real-time GPS tracking, route monitoring, and live location updates</p>
+              </div>
+            </div>
+            <div class="status-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="status-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="status-icon completed">
+                <i class="fas fa-flag-checkered"></i>
+              </div>
+              <div class="status-content">
+                <h3 class="h4 mb-3">Completed Stage</h3>
+                <p>Post-trip inspection, arrival checklist, and trip report generation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Trip Preview (Based on your documentation) -->
+  <section class="live-trip-preview section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Live Trip Preview</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="trip-card" data-aos="fade-up">
+            <!-- Trip Header -->
+            <div class="trip-header">
+              <div class="trip-status">
+                <span class="badge bg-success">CRUISING</span>
+                <span class="trip-id">Trip Ticket ID: EVPREG-2024-001</span>
+              </div>
+              <h3 class="h4 mb-0">Graviton → Cadiznafans</h3>
+            </div>
+
+            <!-- Travel Overview Grid -->
+            <div class="travel-overview">
+              <div class="overview-grid">
+                <div class="overview-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div>
+                    <small>DEPARTURE</small>
+                    <strong>Graviton Terminal</strong>
+                  </div>
+                </div>
+                <div class="overview-item">
+                  <i class="fas fa-location-dot"></i>
+                  <div>
+                    <small>DESTINATION</small>
+                    <strong>Cadiznafans</strong>
+                  </div>
+                </div>
+                <div class="overview-item">
+                  <i class="fas fa-compass"></i>
+                  <div>
+                    <small>ORIENTATION</small>
+                    <strong>North-East</strong>
+                  </div>
+                </div>
+                <div class="overview-item">
+                  <i class="fas fa-tachometer-alt"></i>
+                  <div>
+                    <small>AVERAGE SPEED</small>
+                    <strong>65 km/h</strong>
+                  </div>
+                </div>
+                <div class="overview-item">
+                  <i class="fas fa-road"></i>
+                  <div>
+                    <small>DISTANCE</small>
+                    <strong>38.7 km</strong>
+                  </div>
+                </div>
+                <div class="overview-item">
+                  <i class="fas fa-clock"></i>
+                  <div>
+                    <small>EST. DURATION</small>
+                    <strong>45 mins</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vehicle & Driver Info -->
+            <div class="vehicle-info-section">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="info-panel">
+                    <h4 class="h6 mb-3">VEHICLE INFORMATION</h4>
+                    <div class="vehicle-details">
+                      <div class="detail-row">
+                        <span>Model:</span>
+                        <strong>Avik M/s 22J</strong>
+                      </div>
+                      <div class="detail-row">
+                        <span>Plate Number:</span>
+                        <strong>ABC-1234</strong>
+                      </div>
+                      <div class="detail-row">
+                        <span>Odometer:</span>
+                        <strong>10,600 km</strong>
+                      </div>
+                      <div class="detail-row">
+                        <span>Fuel Level:</span>
+                        <strong>75%</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-panel">
+                    <h4 class="h6 mb-3">DRIVER INFORMATION</h4>
+                    <div class="driver-details">
+                      <div class="detail-row">
+                        <span>Name:</span>
+                        <strong>Villimon, Markum</strong>
+                      </div>
+                      <div class="detail-row">
+                        <span>License:</span>
+                        <strong>A12-34-567890</strong>
+                      </div>
+                      <div class="detail-row">
+                        <span>Experience:</span>
+                        <strong>8 years</strong>
+                      </div>
+                      <div class="detail-row">
+                        <span>Contact:</span>
+                        <strong>+63 912 345 6789</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Passengers -->
+            <div class="passengers-section">
+              <h4 class="h6 mb-3">PASSENGERS</h4>
+              <div class="passenger-list">
+                <span class="passenger-tag"><i class="fas fa-user me-2"></i>John Smith</span>
+                <span class="passenger-tag"><i class="fas fa-user me-2"></i>Michael Johnson</span>
+                <span class="passenger-tag"><i class="fas fa-user me-2"></i>Robert Williams</span>
+                <span class="passenger-tag"><i class="fas fa-user me-2"></i>Maria Santos</span>
+              </div>
+            </div>
+
+            <!-- Travel Purpose -->
+            <div class="purpose-section">
+              <h4 class="h6 mb-2">TRAVEL PURPOSE</h4>
+              <p>Regular route transport - Passenger shuttle service between Graviton and Cadiznafans</p>
+            </div>
+
+            <!-- Two-Column Checklist (Based on your documentation) -->
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <div class="checklist-panel departure-checklist">
+                  <h4 class="h6 mb-3"><i class="fas fa-clipboard-check me-2 text-primary"></i>Departure Checklist</h4>
+                  <div class="checklist-items">
+                    <div class="checklist-item">
+                      <i class="fas fa-check-circle text-success"></i>
+                      <span>Engine oil checked</span>
+                    </div>
+                    <div class="checklist-item">
+                      <i class="fas fa-check-circle text-success"></i>
+                      <span>Tire pressure OK</span>
+                    </div>
+                    <div class="checklist-item">
+                      <i class="fas fa-check-circle text-success"></i>
+                      <span>Brakes functional</span>
+                    </div>
+                    <div class="checklist-item">
+                      <i class="fas fa-check-circle text-success"></i>
+                      <span>Lights working</span>
+                    </div>
+                    <div class="checklist-item">
+                      <i class="fas fa-check-circle text-success"></i>
+                      <span>Fuel tank full</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="checklist-panel arrival-checklist">
+                  <h4 class="h6 mb-3"><i class="fas fa-clipboard-list me-2 text-primary"></i>Arrival Checklist</h4>
+                  <div class="checklist-items">
+                    <div class="checklist-item">
+                      <i class="fas fa-hourglass-half text-warning"></i>
+                      <span>Post-trip inspection</span>
+                    </div>
+                    <div class="checklist-item">
+                      <i class="fas fa-hourglass-half text-warning"></i>
+                      <span>Fuel consumption record</span>
+                    </div>
+                    <div class="checklist-item">
+                      <i class="fas fa-hourglass-half text-warning"></i>
+                      <span>Issue reporting</span>
+                    </div>
+                    <div class="checklist-item">
+                      <i class="fas fa-hourglass-half text-warning"></i>
+                      <span>Passenger count</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Information (From your documentation) -->
+            <div class="additional-info mt-4">
+              <h4 class="h6 mb-3">Additional Information</h4>
+              <div class="info-grid">
+                <div class="info-row">
+                  <span>Departure Date/Time:</span>
+                  <strong>04/23/2024 08:00 AM</strong>
+                </div>
+                <div class="info-row">
+                  <span>Arrival Date/Time:</span>
+                  <strong>04/23/2024 08:45 AM</strong>
+                </div>
+                <div class="info-row">
+                  <span>Fuel Used:</span>
+                  <strong>4.5 liters</strong>
+                </div>
+                <div class="info-row">
+                  <span>Other Issues:</span>
+                  <strong>None reported</strong>
+                </div>
+                <div class="info-row">
+                  <span>Odometer End:</span>
+                  <strong>10,645 km</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="key-features section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Key Features</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3 class="h4 mb-3">Vehicle Management</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Complete vehicle profiles</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Maintenance scheduling</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Fuel consumption tracking</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Odometer monitoring</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Document management</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <h3 class="h4 mb-3">Driver Management</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Driver profiles & history</li>
+              <li><i class="fas fa-check text-primary me-2"></i>License tracking</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Performance ratings</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Assignment scheduling</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Training records</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-ticket-alt"></i>
+            </div>
+            <h3 class="h4 mb-3">Trip Ticket Management</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Automated ticket generation</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Unique ticket IDs (e.g., EVPREG-2024-001)</li>
+              <li><i class="fas fa-check text-primary me-2"></i>QR code integration</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Digital signatures</li>
+              <li><i class="fas fa-check text-primary me-2"></i>History tracking</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <h3 class="h4 mb-3">Google Maps Integration</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Real-time route tracking</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Geofencing alerts</li>
+              <li><i class="fas fa-check text-primary me-2"></i>ETA calculations</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Traffic monitoring</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Route optimization</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <h3 class="h4 mb-3">Checklist System</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Departure checklists</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Arrival checklists</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Safety inspections</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Issue reporting</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Photo attachments</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <h3 class="h4 mb-3">Reports & Analytics</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Trip summaries</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Fuel efficiency reports</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Driver performance</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Vehicle utilization</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Cost analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Maps Preview -->
+  <section class="maps-preview section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Live Route Tracking</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="map-container" data-aos="fade-up">
+            <div id="map" style="height: 400px; width: 100%; border-radius: 15px;"></div>
+            <div class="map-overlay">
+              <div class="route-info">
+                <span class="badge bg-primary">Graviton → Cadiznafans</span>
+                <span class="badge bg-success">38.7 km · 45 mins</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack -->
+  <section class="tech-stack section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Technology Stack</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="tech-grid">
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
+              <i class="fab fa-laravel"></i>
+              <span>Laravel</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="150">
+              <i class="fab fa-vuejs"></i>
+              <span>Vue.js</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fas fa-database"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="250">
+              <i class="fas fa-map-marked-alt"></i>
+              <span>Google Maps API</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fas fa-bolt"></i>
+              <span>WebSocket</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="350">
+              <i class="fas fa-qrcode"></i>
+              <span>QR Code</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
+              <i class="fas fa-mobile-alt"></i>
+              <span>PWA</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="450">
+              <i class="fas fa-cloud"></i>
+              <span>AWS</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="500">
+              <i class="fab fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="550">
+              <i class="fas fa-chart-line"></i>
+              <span>Chart.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- System Architecture -->
+  <section class="system-architecture section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">System Architecture</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="architecture-diagram">
+            <div class="arch-box frontend">
+              <i class="fab fa-vuejs"></i>
+              <h4>Frontend</h4>
+              <p>Vue.js SPA<br>Real-time Dashboard<br>Mobile Responsive</p>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="arch-box api">
+              <i class="fab fa-laravel"></i>
+              <h4>API Gateway</h4>
+              <p>RESTful API<br>WebSocket Server<br>Authentication</p>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="arch-box backend">
+              <i class="fas fa-map-marked-alt"></i>
+              <h4>Tracking Service</h4>
+              <p>GPS Processing<br>Geofencing<br>Route Optimization</p>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="arch-box database">
+              <i class="fas fa-database"></i>
+              <h4>Data Layer</h4>
+              <p>MySQL<br>Redis Cache<br>Geo-indexing</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="architecture-content">
+            <h3 class="h4 mb-3">Real-time Tracking Architecture</h3>
+            <p>The system uses WebSocket connections for live location updates, Google Maps for visualization, and a robust backend for processing millions of GPS data points.</p>
+            <ul class="arch-list mt-4">
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Real-time Updates:</strong> WebSocket for live vehicle tracking</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Geofencing:</strong> Automated alerts for boundary violations</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Offline Support:</strong> PWA for areas with poor connectivity</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Scalability:</strong> Handles 1000+ concurrent vehicles</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Data Compression:</strong> Efficient GPS data storage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Database Schema -->
+  <section class="database-schema section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Database Schema</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="schema-diagram" data-aos="fade-up">
+            <pre class="schema-code"><code>
+-- Core Tables Structure
+vehicles
+  ├── id (PK)
+  ├── plate_number (unique)
+  ├── model (e.g., Avik M/s 22J)
+  ├── year
+  ├── fuel_type
+  ├── status (active/maintenance/inactive)
+  ├── current_odometer
+  ├── last_maintenance
+  └── created_at
+
+drivers
+  ├── id (PK)
+  ├── first_name, last_name
+  ├── license_number
+  ├── license_expiry
+  ├── contact_number
+  ├── email
+  ├── address
+  ├── hire_date
+  ├── status (active/suspended/inactive)
+  └── created_at
+
+trip_tickets
+  ├── id (PK)
+  ├── ticket_number (unique) (e.g., EVPREG-2024-001)
+  ├── vehicle_id (FK)
+  ├── driver_id (FK)
+  ├── departure_location (e.g., Graviton)
+  ├── destination (e.g., Cadiznafans)
+  ├── travel_purpose
+  ├── distance_km (38.7)
+  ├── estimated_duration
+  ├── status (scheduled/departed/traveling/completed/cancelled)
+  ├── departure_datetime (04/23/2024 08:00AM)
+  ├── arrival_datetime (04/23/2024 08:45AM)
+  └── created_at
+
+trip_passengers
+  ├── id (PK)
+  ├── trip_ticket_id (FK)
+  ├── passenger_name (John Smith)
+  └── passenger_type (employee/guest)
+
+departure_checklist
+  ├── id (PK)
+  ├── trip_ticket_id (FK)
+  ├── engine_oil_checked (boolean)
+  ├── tire_pressure_ok (boolean)
+  ├── brakes_functional (boolean)
+  ├── lights_working (boolean)
+  ├── fuel_level
+  ├── odometer_start (10600)
+  └── checked_by (FK)
+
+arrival_checklist
+  ├── id (PK)
+  ├── trip_ticket_id (FK)
+  ├── post_trip_inspection (boolean)
+  ├── fuel_used (4.5 liters)
+  ├── issues_reported (text)
+  ├── odometer_end (10645)
+  ├── passenger_count_verified (boolean)
+  └── checked_by (FK)
+
+gps_locations
+  ├── id (PK)
+  ├── vehicle_id (FK)
+  ├── trip_ticket_id (FK)
+  ├── latitude
+  ├── longitude
+  ├── speed (65 km/h)
+  ├── orientation (North-East)
+  └── timestamp
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots/Gallery -->
+  <section class="project-gallery section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">System Screenshots</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Fleet+Dashboard" alt="Fleet Dashboard" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Fleet Dashboard</h5>
+              <p>Real-time vehicle overview</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Trip+Tracking" alt="Trip Tracking" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Live Trip Tracking</h5>
+              <p>Real-time vehicle location</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Trip+Ticket" alt="Trip Ticket" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Trip Ticket</h5>
+              <p>Digital trip ticket with QR code</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Checklist" alt="Checklist" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Departure Checklist</h5>
+              <p>Pre-trip inspection form</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Driver+Profile" alt="Driver Profile" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Driver Management</h5>
+              <p>Driver profiles and history</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Analytics" alt="Analytics" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Fleet Analytics</h5>
+              <p>Performance reports</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Case Scenarios -->
+  <section class="use-cases section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Use Case Scenarios</h2>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="use-case-timeline">
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="use-case-icon">
+                <i class="fas fa-clipboard-list"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Daily Trip Creation</h3>
+                <p>Dispatcher creates a new trip ticket, selects vehicle (Avik M/s 22J) and driver (Villimon, Markum), sets destination (Cadiznafans), and generates unique ticket ID (EVPREG-2024-001).</p>
+              </div>
+            </div>
+            
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="use-case-icon">
+                <i class="fas fa-check-double"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Departure Procedure</h3>
+                <p>Driver completes departure checklist, records odometer (10,600 km), fuel level, and verifies vehicle condition. System timestamps departure at 08:00 AM and changes status to "Traveling".</p>
+              </div>
+            </div>
+            
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="use-case-icon">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Live Tracking</h3>
+                <p>During journey, GPS continuously sends location data. Speed (65 km/h), orientation (North-East), and ETA are updated in real-time on the dispatch dashboard.</p>
+              </div>
+            </div>
+            
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="use-case-icon">
+                <i class="fas fa-flag-checkered"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Arrival Processing</h3>
+                <p>Upon arrival at 08:45 AM, driver completes arrival checklist, records fuel used (4.5L), final odometer (10,645 km), and any issues. Trip is marked as "Completed".</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges & Solutions -->
+  <section class="challenges section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Challenges & Solutions</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="challenge-list">
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Real-time GPS Data Processing</h3>
+              </div>
+              <p>Handling thousands of GPS updates per minute from multiple vehicles required optimized data processing. Implemented message queuing with Redis and batch database inserts to handle high throughput without performance degradation.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Offline Mode for Remote Areas</h3>
+              </div>
+              <p>Vehicles traveling through areas with poor connectivity needed to continue recording trips. Developed Progressive Web App (PWA) features with local storage sync that automatically uploads data when connection is restored.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Accurate ETA Calculations</h3>
+              </div>
+              <p>Providing accurate arrival times required considering traffic, route conditions, and historical data. Integrated Google Maps Distance Matrix API with machine learning models trained on historical trip data for more accurate ETAs.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Geofencing Accuracy</h3>
+              </div>
+              <p>Ensuring accurate geofence triggers at departure and arrival points. Implemented a hybrid approach using GPS accuracy thresholds and manual confirmation to prevent false alerts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Client Feedback</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="testimonial-card" data-aos="fade-up">
+            <i class="fas fa-quote-left fa-3x text-primary mb-3"></i>
+            <p class="lead mb-4">"The Fleet Journey Management System has revolutionized how we track our vehicles. We now have complete visibility of all trips, improved driver accountability, and reduced unauthorized vehicle use by 90%. The departure/arrival checklists ensure our vehicles are properly maintained."</p>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/60x60/1e293b/38bdf8?text=DC" alt="Client" class="rounded-circle">
+              <div>
+                <h5 class="mb-1">David Cruz</h5>
+                <p class="text-muted">Fleet Manager, Metro Express Transport</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Projects -->
+  <section class="related-projects section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Related Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">Vehicle Management System</h3>
+              <p class="mb-3">Comprehensive fleet maintenance</p>
+              <a href="vehicle-management.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">Warehouse & Inventory</h3>
+              <p class="mb-3">Inventory tracking system</p>
+              <a href="warehouse.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">HR Management System</h3>
+              <p class="mb-3">Employee and payroll management</p>
+              <a href="hrms.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content text-center">
+        <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Streamline Your Fleet Operations</h2>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Let's build a customized fleet management solution for your business.</p>
+        <a href="index.html#contact" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="200">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2024 Ronel O. Patayon. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Google Maps Initialization -->
+  <script>
+    function initMap() {
+      // Default location (you can set this to your preferred coordinates)
+      const graviton = { lat: 14.5995, lng: 120.9842 }; // Example coordinates
+      const cadiznafans = { lat: 14.6500, lng: 121.0500 }; // Example coordinates
+      
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: graviton,
+        styles: [
+          {
+            "featureType": "all",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#242f3e" }]
+          },
+          {
+            "featureType": "all",
+            "elementType": "labels.text.stroke",
+            "stylers": [{ "color": "#242f3e" }]
+          },
+          {
+            "featureType": "all",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#746855" }]
+          },
+          {
+            "featureType": "administrative.locality",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#d59563" }]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#d59563" }]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#38414e" }]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry.stroke",
+            "stylers": [{ "color": "#212a37" }]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#9ca5b3" }]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#2f3948" }]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#17263c" }]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#515c6d" }]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.stroke",
+            "stylers": [{ "color": "#17263c" }]
+          }
+        ]
+      });
+
+      // Add markers for departure and destination
+      new google.maps.Marker({
+        position: graviton,
+        map: map,
+        title: 'Graviton (Departure)',
+        icon: {
+          url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+        }
+      });
+
+      new google.maps.Marker({
+        position: cadiznafans,
+        map: map,
+        title: 'Cadiznafans (Destination)',
+        icon: {
+          url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+        }
+      });
+
+      // Draw route line
+      const routePath = new google.maps.Polyline({
+        path: [graviton, cadiznafans],
+        geodesic: true,
+        strokeColor: '#38bdf8',
+        strokeOpacity: 1.0,
+        strokeWeight: 3
+      });
+
+      routePath.setMap(map);
+    }
+  </script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/project-detail.js"></script>
+</body>
+</html>
