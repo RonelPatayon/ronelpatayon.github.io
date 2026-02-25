@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Savings & Borrowing System | Ronel O. Patayon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete financial platform for cooperatives with savings management, loan processing, interest calculations, and member dashboards">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6.4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html">Ronel Patayon</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link theme-toggle" href="#" id="theme-toggle">
+              <i class="fa-solid fa-moon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Hero Section -->
+  <section class="project-hero">
+    <div class="container">
+      <div class="row align-items-center min-vh-50 py-5">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="project-badge mb-4">
+            <span class="badge bg-primary me-2">Python & Django</span>
+            <span class="badge bg-primary me-2">Financial System</span>
+            <span class="badge bg-primary">Cooperative</span>
+          </div>
+          <h1 class="display-3 fw-bold mb-3">Savings & Borrowing Management System</h1>
+          <p class="lead mb-4">A comprehensive financial platform designed for cooperatives and credit unions to manage member savings, process loans, calculate interest, generate reports, and ensure regulatory compliance.</p>
+          <div class="project-links">
+            <a href="#" class="btn btn-primary btn-lg me-3"><i class="fas fa-eye me-2"></i>Live Demo</a>
+            <a href="#" class="btn btn-outline-primary btn-lg"><i class="fab fa-github me-2"></i>Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="project-overview section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title" data-aos="fade-up">Project Overview</h2>
+          <div class="overview-content" data-aos="fade-up" data-aos-delay="100">
+            <p class="lead">The Savings & Borrowing Management System was developed to digitize and streamline the financial operations of cooperatives and microfinance institutions. This platform handles member management, multiple savings account types, loan processing with various interest schemes, and comprehensive financial reporting, serving over 5,000 members with PHP 50M+ in assets.</p>
+            
+            <div class="row mt-5">
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">5,000+</div>
+                  <div class="stat-label">Active Members</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">₱50M+</div>
+                  <div class="stat-label">Assets Managed</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">98%</div>
+                  <div class="stat-label">Loan Repayment Rate</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">70%</div>
+                  <div class="stat-label">Processing Time Reduction</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="key-features section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Key Features</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-piggy-bank"></i>
+            </div>
+            <h3 class="h4 mb-3">Savings Management</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Multiple account types (regular, time deposit, special)</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Automated interest computation</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Deposit & withdrawal tracking</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Passbook integration</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Monthly statements</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h3 class="h4 mb-3">Loan Management</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Multiple loan types (emergency, regular, housing, business)</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Automated loan approval workflow</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Flexible interest calculations</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Amortization schedules</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Collateral management</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="h4 mb-3">Member Management</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Complete member profiles</li>
+              <li><i class="fas fa-check text-primary me-2"></i>KYC verification</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Family/dependent information</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Membership tiers</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Document management</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <h3 class="h4 mb-3">Financial Reports</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Balance sheets</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Income statements</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Trial balance</li>
+              <li><i class="fas fa-check text-primary me-2"></i>General ledger</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Regulatory reports (BSP, CDA)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-percent"></i>
+            </div>
+            <h3 class="h4 mb-3">Interest & Dividends</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Automated interest posting</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Dividend distribution</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Patronage refunds</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Custom interest rates per product</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Historical rate tracking</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="h4 mb-3">Security & Compliance</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Role-based access control</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Two-factor authentication</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Audit trails</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Data encryption</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Regulatory compliance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financial Products -->
+  <section class="financial-products section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Financial Products</h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-card">
+            <div class="product-header">
+              <i class="fas fa-piggy-bank fa-2x text-primary"></i>
+              <h3 class="h4 mb-0">Savings Products</h3>
+            </div>
+            <div class="product-body">
+              <div class="product-item">
+                <h5>Regular Savings</h5>
+                <p>Base interest rate: 2.5% p.a.</p>
+                <small>Minimum balance: ₱500</small>
+              </div>
+              <div class="product-item">
+                <h5>Time Deposit</h5>
+                <p>30 days: 3% | 60 days: 3.5% | 90 days: 4%</p>
+                <small>Minimum: ₱10,000</small>
+              </div>
+              <div class="product-item">
+                <h5>Special Savings</h5>
+                <p>Premium members: 3.5% p.a.</p>
+                <small>Minimum balance: ₱50,000</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-card">
+            <div class="product-header">
+              <i class="fas fa-hand-holding-usd fa-2x text-primary"></i>
+              <h3 class="h4 mb-0">Loan Products</h3>
+            </div>
+            <div class="product-body">
+              <div class="product-item">
+                <h5>Emergency Loan</h5>
+                <p>Interest: 1% per month | Term: 3-6 months</p>
+                <small>Maximum: ₱20,000</small>
+              </div>
+              <div class="product-item">
+                <h5>Regular Loan</h5>
+                <p>Interest: 0.75% per month | Term: 6-24 months</p>
+                <small>Maximum: ₱100,000</small>
+              </div>
+              <div class="product-item">
+                <h5>Housing Loan</h5>
+                <p>Interest: 0.5% per month | Term: 1-10 years</p>
+                <small>Maximum: ₱1,000,000</small>
+              </div>
+              <div class="product-item">
+                <h5>Business Loan</h5>
+                <p>Interest: 0.6% per month | Term: 3-36 months</p>
+                <small>Maximum: ₱500,000</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack -->
+  <section class="tech-stack section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Technology Stack</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="tech-grid">
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
+              <i class="fab fa-python"></i>
+              <span>Python 3.11</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="150">
+              <i class="fab fa-django"></i>
+              <span>Django 4.2</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fas fa-database"></i>
+              <span>PostgreSQL</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="250">
+              <i class="fas fa-chart-line"></i>
+              <span>Pandas</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fab fa-vuejs"></i>
+              <span>Vue.js</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="350">
+              <i class="fas fa-calculator"></i>
+              <span>NumPy</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
+              <i class="fas fa-lock"></i>
+              <span>JWT Auth</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="450">
+              <i class="fas fa-file-pdf"></i>
+              <span>ReportLab</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="500">
+              <i class="fas fa-cloud"></i>
+              <span>AWS/GCP</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="550">
+              <i class="fas fa-chart-bar"></i>
+              <span>Chart.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- System Architecture -->
+  <section class="system-architecture section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">System Architecture</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="architecture-diagram">
+            <div class="arch-box frontend">
+              <i class="fab fa-vuejs"></i>
+              <h4>Presentation Layer</h4>
+              <p>Vue.js SPA<br>Responsive UI<br>Member Portal</p>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="arch-box api">
+              <i class="fab fa-django"></i>
+              <h4>Application Layer</h4>
+              <p>Django REST API<br>Business Logic<br>Authentication</p>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="arch-box backend">
+              <i class="fas fa-calculator"></i>
+              <h4>Service Layer</h4>
+              <p>Interest Engine<br>Loan Calculator<br>Report Generator</p>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="arch-box database">
+              <i class="fas fa-database"></i>
+              <h4>Data Layer</h4>
+              <p>PostgreSQL<br>Redis Cache<br>Backup System</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="architecture-content">
+            <h3 class="h4 mb-3">Secure Multi-tier Architecture</h3>
+            <p>The Savings & Borrowing System uses a robust multi-tier architecture ensuring data integrity, security, and scalability for financial operations.</p>
+            <ul class="arch-list mt-4">
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Transaction Integrity:</strong> ACID compliance for all financial transactions</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Double-entry Accounting:</strong> Ensures books always balance</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Automated Interest:</strong> Scheduled jobs for accurate interest posting</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Audit Trail:</strong> Complete history of all financial changes</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Backup & Recovery:</strong> Automated backups and disaster recovery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Database Schema -->
+  <section class="database-schema section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Database Schema</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="schema-diagram" data-aos="fade-up">
+            <pre class="schema-code"><code>
+-- Core Tables Structure
+members
+  ├── id (PK)
+  ├── member_number (unique)
+  ├── first_name, last_name
+  ├── birth_date
+  ├── contact_number
+  ├── email
+  ├── address
+  ├── civil_status
+  ├── dependents_count
+  ├── employment_status
+  ├── monthly_income
+  ├── status (active/inactive)
+  └── date_joined
+
+savings_accounts
+  ├── id (PK)
+  ├── account_number (unique)
+  ├── member_id (FK)
+  ├── account_type (regular/time/special)
+  ├── current_balance
+  ├── interest_rate
+  ├── status
+  ├── opened_date
+  ├── closed_date
+  └── last_interest_posted
+
+savings_transactions
+  ├── id (PK)
+  ├── account_id (FK)
+  ├── transaction_date
+  ├── transaction_type (deposit/withdrawal/interest)
+  ├── amount
+  ├── running_balance
+  ├── reference_number
+  ├── posted_by (FK)
+  └── description
+
+loans
+  ├── id (PK)
+  ├── loan_number (unique)
+  ├── member_id (FK)
+  ├── loan_type
+  ├── principal_amount
+  ├── interest_rate
+  ├── term_months
+  ├── payment_frequency
+  ├── amortization_type
+  ├── status (pending/approved/released/closed)
+  ├── approved_date
+  ├── released_date
+  ├── maturity_date
+  └── collateral_details
+
+loan_payments
+  ├── id (PK)
+  ├── loan_id (FK)
+  ├── payment_date
+  ├── due_date
+  ├── principal_paid
+  ├── interest_paid
+  ├── penalty_paid
+  ├── total_paid
+  ├── running_balance
+  ├── receipt_number
+  └── payment_method
+
+transactions
+  ├── id (PK)
+  ├── transaction_number (unique)
+  ├── transaction_date
+  ├── account_type (savings/loan)
+  ├── account_id
+  ├── debit_account
+  ├── credit_account
+  ├── amount
+  ├── reference_type
+  ├── reference_id
+  ├── posted_by (FK)
+  ├── approved_by (FK)
+  └── description
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loan Calculator Interactive -->
+  <section class="loan-calculator section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Loan Calculator</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="calculator-card" data-aos="fade-up">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <label class="form-label">Loan Amount (₱)</label>
+                <input type="number" class="form-control" id="loanAmount" value="50000" min="1000" step="1000">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Interest Rate (% per month)</label>
+                <input type="number" class="form-control" id="interestRate" value="1.0" min="0.1" step="0.1">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Loan Term (months)</label>
+                <input type="number" class="form-control" id="loanTerm" value="12" min="1" max="60">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Payment Frequency</label>
+                <select class="form-control" id="paymentFrequency">
+                  <option value="monthly">Monthly</option>
+                  <option value="semi-monthly">Semi-monthly</option>
+                  <option value="weekly">Weekly</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary w-100" onclick="calculateLoan()">Calculate</button>
+              </div>
+            </div>
+
+            <div id="loanResult" class="mt-5" style="display: none;">
+              <h4 class="text-center mb-4">Loan Amortization Schedule</h4>
+              <div class="row text-center mb-4">
+                <div class="col-md-4">
+                  <div class="result-box">
+                    <small>Monthly Payment</small>
+                    <h3 class="text-primary" id="monthlyPayment">₱0</h3>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="result-box">
+                    <small>Total Interest</small>
+                    <h3 class="text-primary" id="totalInterest">₱0</h3>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="result-box">
+                    <small>Total Payment</small>
+                    <h3 class="text-primary" id="totalPayment">₱0</h3>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="table-responsive">
+                <table class="table table-dark" id="amortizationTable">
+                  <thead>
+                    <tr>
+                      <th>Period</th>
+                      <th>Payment</th>
+                      <th>Principal</th>
+                      <th>Interest</th>
+                      <th>Balance</th>
+                    </tr>
+                  </thead>
+                  <tbody id="amortizationBody">
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots/Gallery -->
+  <section class="project-gallery section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">System Screenshots</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Member+Dashboard" alt="Member Dashboard" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Member Dashboard</h5>
+              <p>Personal financial overview</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Savings+Accounts" alt="Savings Accounts" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Savings Management</h5>
+              <p>Multiple account types</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Loan+Application" alt="Loan Application" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Loan Processing</h5>
+              <p>Automated loan workflow</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Financial+Reports" alt="Financial Reports" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Financial Reports</h5>
+              <p>Comprehensive reporting</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Loan+Amortization" alt="Loan Amortization" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Amortization Schedule</h5>
+              <p>Detailed payment breakdown</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Admin+Panel" alt="Admin Panel" class="img-fluid">
+            <div class="gallery-overlay">
+              <h5>Admin Dashboard</h5>
+              <p>System management</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Case Scenarios -->
+  <section class="use-cases section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Use Case Scenarios</h2>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="use-case-timeline">
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="use-case-icon">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">New Member Registration</h3>
+                <p>Staff enters member information, performs KYC verification, and opens initial savings account. System generates member number, creates account, and prints membership documents.</p>
+              </div>
+            </div>
+            
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="use-case-icon">
+                <i class="fas fa-file-signature"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Loan Application Process</h3>
+                <p>Member applies for loan online or in-person. System checks eligibility, calculates capacity, and routes to appropriate approvers. Upon approval, generates promissory note and releases funds.</p>
+              </div>
+            </div>
+            
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="use-case-icon">
+                <i class="fas fa-coins"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">End of Day Processing</h3>
+                <p>System automatically posts daily interest, generates transaction reports, reconciles cash position, and creates backup. Ensures all transactions are balanced before closing.</p>
+              </div>
+            </div>
+            
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="use-case-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Dividend Distribution</h3>
+                <p>At year-end, system calculates member dividends based on share capital and patronage. Automatically posts to member accounts and generates dividend vouchers and tax reports.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges & Solutions -->
+  <section class="challenges section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Challenges & Solutions</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="challenge-list">
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Complex Interest Calculations</h3>
+              </div>
+              <p>Different loan products have varying interest calculation methods (flat rate, diminishing balance, etc.). Implemented a modular calculation engine using Python that handles multiple interest types and ensures accuracy down to the last centavo.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Regulatory Compliance</h3>
+              </div>
+              <p>Cooperatives must comply with BSP and CDA reporting requirements. Built customizable report templates that auto-populate required formats and maintain complete audit trails for regulatory submissions.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Data Migration from Legacy Systems</h3>
+              </div>
+              <p>Migrating years of financial data from Excel and legacy systems was risky. Developed validation scripts that check data integrity, identify discrepancies, and ensure zero balance errors during migration.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Concurrent Transactions</h3>
+              </div>
+              <p>Multiple tellers processing transactions simultaneously could cause balance inconsistencies. Implemented database row-level locking and optimistic concurrency control to prevent race conditions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Client Feedback</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="testimonial-card" data-aos="fade-up">
+            <i class="fas fa-quote-left fa-3x text-primary mb-3"></i>
+            <p class="lead mb-4">"This system transformed our cooperative's operations. We've eliminated manual errors, reduced loan processing time from weeks to days, and our members love the online portal. The automated interest calculations alone save us 20 hours of work every month."</p>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/60x60/1e293b/38bdf8?text=AR" alt="Client" class="rounded-circle">
+              <div>
+                <h5 class="mb-1">Antonio Reyes</h5>
+                <p class="text-muted">General Manager, Samahan Multi-Purpose Cooperative</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Projects -->
+  <section class="related-projects section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Related Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">HR Management System</h3>
+              <p class="mb-3">Employee and payroll management</p>
+              <a href="hrms.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">Warehouse & Inventory</h3>
+              <p class="mb-3">Inventory tracking system</p>
+              <a href="warehouse.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">POS & Inventory</h3>
+              <p class="mb-3">Point of sale system</p>
+              <a href="pos-inventory.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content text-center">
+        <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Ready to Digitize Your Cooperative?</h2>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Let's build a customized financial system for your organization.</p>
+        <a href="index.html#contact" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="200">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2024 Ronel O. Patayon. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Loan Calculator Script -->
+  <script>
+    function calculateLoan() {
+      const amount = parseFloat(document.getElementById('loanAmount').value);
+      const ratePerMonth = parseFloat(document.getElementById('interestRate').value) / 100;
+      const term = parseInt(document.getElementById('loanTerm').value);
+      const frequency = document.getElementById('paymentFrequency').value;
+      
+      // Adjust for payment frequency
+      let paymentsPerYear = 12;
+      let periods = term;
+      let ratePerPeriod = ratePerMonth;
+      
+      if (frequency === 'semi-monthly') {
+        paymentsPerYear = 24;
+        periods = term * 2;
+        ratePerPeriod = ratePerMonth / 2;
+      } else if (frequency === 'weekly') {
+        paymentsPerYear = 52;
+        periods = term * 4.33;
+        ratePerPeriod = ratePerMonth / 4.33;
+      }
+      
+      // Calculate monthly payment using loan amortization formula
+      const monthlyPayment = amount * (ratePerPeriod * Math.pow(1 + ratePerPeriod, periods)) / (Math.pow(1 + ratePerPeriod, periods) - 1);
+      const totalPayment = monthlyPayment * periods;
+      const totalInterest = totalPayment - amount;
+      
+      // Display summary
+      document.getElementById('monthlyPayment').textContent = '₱' + monthlyPayment.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('totalInterest').textContent = '₱' + totalInterest.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('totalPayment').textContent = '₱' + totalPayment.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      
+      // Generate amortization schedule
+      let balance = amount;
+      let tableBody = '';
+      
+      for (let i = 1; i <= periods; i++) {
+        const interestPayment = balance * ratePerPeriod;
+        const principalPayment = monthlyPayment - interestPayment;
+        balance -= principalPayment;
+        
+        if (balance < 0) balance = 0;
+        
+        tableBody += `
+          <tr>
+            <td>${i}</td>
+            <td>₱${monthlyPayment.toFixed(2)}</td>
+            <td>₱${principalPayment.toFixed(2)}</td>
+            <td>₱${interestPayment.toFixed(2)}</td>
+            <td>₱${balance.toFixed(2)}</td>
+          </tr>
+        `;
+      }
+      
+      document.getElementById('amortizationBody').innerHTML = tableBody;
+      document.getElementById('loanResult').style.display = 'block';
+      
+      // Smooth scroll to results
+      document.getElementById('loanResult').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/project-detail.js"></script>
+</body>
+</html>
