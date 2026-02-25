@@ -452,3 +452,143 @@ body.light-mode .cta-section {
     transform: translateY(0);
   }
 }
+/* Use Case Timeline */
+.use-case-timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.use-case-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--primary-color);
+  opacity: 0.3;
+}
+
+.use-case-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.use-case-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(56, 189, 248, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid var(--primary-color);
+  z-index: 1;
+  background: var(--dark-surface);
+}
+
+.use-case-icon i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.use-case-content {
+  flex-grow: 1;
+  padding: 1.5rem;
+  background: var(--dark-surface);
+  border-radius: 15px;
+  transition: var(--transition);
+}
+
+.use-case-content:hover {
+  transform: translateX(10px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* ROI Calculator */
+.roi-card {
+  background: var(--dark-surface);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.roi-card .form-control {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--dark-text);
+  padding: 0.75rem;
+  border-radius: 10px;
+}
+
+.roi-card .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.25);
+}
+
+.roi-card .form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+#roiResult {
+  padding: 2rem;
+  background: rgba(56, 189, 248, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+#savingsAmount {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* Light Mode Adjustments */
+body.light-mode .use-case-icon {
+  background: var(--light-surface);
+}
+
+body.light-mode .use-case-content {
+  background: var(--light-surface);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+body.light-mode .roi-card {
+  background: var(--light-surface);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+body.light-mode .roi-card .form-control {
+  background: #ffffff;
+  border-color: #e2e8f0;
+  color: var(--light-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .use-case-timeline::before {
+    left: 20px;
+  }
+  
+  .use-case-item {
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 0;
+  }
+  
+  .use-case-icon {
+    margin-left: 0;
+  }
+  
+  .use-case-content:hover {
+    transform: none;
+  }
+  
+  .roi-card {
+    padding: 2rem;
+  }
+}
