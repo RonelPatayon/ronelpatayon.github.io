@@ -1173,3 +1173,435 @@ body.light-mode .route-info {
     margin: 0.5rem 0;
   }
 }
+/* Network Topology */
+.topology-container {
+  background: var(--dark-surface);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.topology-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.isp-box {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  min-width: 150px;
+}
+
+.isp-box i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.isp-box span {
+  display: block;
+  font-weight: 600;
+}
+
+.isp-box small {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.router-box {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid var(--primary-color);
+  max-width: 300px;
+  margin: 0 auto 2rem;
+}
+
+.router-box i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.router-box span {
+  display: block;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.router-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.router-features span {
+  background: rgba(56, 189, 248, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.switch-box {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 250px;
+  margin: 0 auto 2rem;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.switch-box i {
+  font-size: 2rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+
+/* VLAN Grid */
+.vlan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.vlan-box {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.vlan-box:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+}
+
+.vlan-header {
+  padding: 0.25rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.vlan-header.management { background: rgba(56, 189, 248, 0.2); color: #38bdf8; }
+.vlan-header.employees { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+.vlan-header.guest { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+.vlan-header.servers { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+.vlan-header.voip { background: rgba(139, 92, 246, 0.2); color: #8b5cf6; }
+.vlan-header.iot { background: rgba(236, 72, 153, 0.2); color: #ec4899; }
+.vlan-header.dmz { background: rgba(249, 115, 22, 0.2); color: #f97316; }
+.vlan-header.dev { background: rgba(132, 204, 22, 0.2); color: #84cc16; }
+
+.vlan-box i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.vlan-box h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.vlan-box p {
+  font-size: 0.85rem;
+  font-family: monospace;
+  margin-bottom: 0.25rem;
+}
+
+.vlan-box small {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+/* Configuration Tabs */
+.config-tabs {
+  background: var(--dark-surface);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.nav-tabs {
+  background: #1e293b;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-tabs .nav-link {
+  color: var(--dark-text);
+  border: none;
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  background: transparent;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.config-content {
+  padding: 2rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.config-content pre {
+  margin: 0;
+  background: #0f172a !important;
+  border-radius: 10px;
+}
+
+.config-content code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Hardware Cards */
+.hardware-card {
+  background: var(--dark-surface);
+  border-radius: 15px;
+  padding: 2rem;
+  height: 100%;
+  transition: var(--transition);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.hardware-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-color: var(--primary-color);
+}
+
+.hardware-image {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hardware-specs {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.hardware-specs li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.hardware-specs li:last-child {
+  border-bottom: none;
+}
+
+.hardware-specs i {
+  width: 20px;
+  color: var(--primary-color);
+}
+
+/* Monitoring Section */
+.monitoring-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--dark-surface);
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.monitor-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.monitor-item i {
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+.monitor-item h5 {
+  margin-bottom: 0.25rem;
+}
+
+.monitor-item p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* Security Cards */
+.security-card {
+  background: var(--dark-surface);
+  padding: 2rem;
+  border-radius: 15px;
+  height: 100%;
+  transition: var(--transition);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.security-card:hover {
+  border-color: var(--primary-color);
+}
+
+.security-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.security-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.95rem;
+}
+
+.security-card li:last-child {
+  border-bottom: none;
+}
+
+/* Bandwidth Graphs */
+.graph-card {
+  background: var(--dark-surface);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.graph-placeholder {
+  height: 250px;
+  width: 100%;
+}
+
+/* Download Card */
+.download-card {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #0284c7 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  color: #020617;
+}
+
+.download-card i {
+  color: #020617;
+}
+
+.download-card .btn-primary {
+  background: #020617;
+  color: white;
+  border: none;
+}
+
+.download-card .btn-outline-primary {
+  border-color: #020617;
+  color: #020617;
+}
+
+.download-card .btn-outline-primary:hover {
+  background: #020617;
+  color: white;
+}
+
+/* Light Mode Adjustments */
+body.light-mode .topology-container,
+body.light-mode .hardware-card,
+body.light-mode .security-card,
+body.light-mode .graph-card,
+body.light-mode .config-tabs {
+  background: var(--light-surface);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+body.light-mode .nav-tabs {
+  background: #f1f5f9;
+}
+
+body.light-mode .config-content pre {
+  background: #f8fafc !important;
+}
+
+body.light-mode .isp-box,
+body.light-mode .router-box {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  border-color: #e2e8f0;
+}
+
+body.light-mode .vlan-box {
+  background: #f8fafc;
+}
+
+body.light-mode .hardware-specs li {
+  border-bottom-color: #e2e8f0;
+}
+
+body.light-mode .monitoring-stats {
+  background: var(--light-surface);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .topology-container {
+    padding: 1.5rem;
+  }
+  
+  .topology-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .vlan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .nav-tabs .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .config-content {
+    padding: 1rem;
+  }
+  
+  .monitoring-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .download-card {
+    padding: 2rem;
+  }
+  
+  .download-buttons .btn {
+    display: block;
+    margin: 1rem 0 !important;
+    width: 100%;
+  }
+}
