@@ -4,128 +4,197 @@
   <meta charset="UTF-8">
   <title>Ronel O. Patayon | IT Administrator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" content="IT Administrator specializing in systems development, networking, and business solutions">
+  
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Font Awesome 6.4 - CDN (No integrity, safer) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" />
-
-
-
+  
+  <!-- Font Awesome 6.4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- Navbar -->
-<header class="navbar navbar-expand-lg px-4 py-3">
-  
-  <!-- Brand -->
-  <a class="navbar-brand logo" href="#">Ronel</a>
-
-  <!-- Mobile Burger -->
-  <button class="navbar-toggler" type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navMenu"
-          aria-controls="navMenu"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <!-- Menu -->
-  <div class="collapse navbar-collapse" id="navMenu">
-    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-      <li class="nav-item">
-        <a class="nav-link" href="#about">About</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#projects">Projects</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#skills">Skills</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#contact">Contact</a>
-      </li>
-
-      <!-- Theme Toggle Link -->
-      <li class="nav-item">
-        <a class="nav-link" href="#" id="theme-toggle">
-          <i class="fa-solid fa-moon me-1"></i> Dark Theme
-        </a>
-      </li>
-
-    </ul>
-  </div>
-
-</header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="#">Ronel Patayon</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link theme-toggle" href="#" id="theme-toggle">
+              <i class="fa-solid fa-moon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
-  <section class="hero text-center py-5">
-    <h2 class="display-4 fw-bold">RONEL O. PATAYON</h2>
-    <p class="role fw-semibold">IT Administrator | Systems & Web Developer</p>
-    <p class="tagline fst-italic">I build reliable systems that keep businesses running.</p>
-    <div class="mt-3">
-      <a href="#projects" class="btn btn-primary me-2">View Projects</a>
-      <a href="#" class="btn btn-outline-primary">Download Resume</a>
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-8" data-aos="fade-up">
+          <h5 class="text-primary mb-3">Welcome to my portfolio</h5>
+          <h1 class="display-3 fw-bold mb-3">Ronel O. Patayon</h1>
+          <h2 class="h3 text-secondary mb-4">IT Administrator | Systems & Web Developer</h2>
+          <p class="lead mb-4">I build reliable, scalable systems that keep businesses running smoothly. Specializing in network infrastructure and custom business solutions.</p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary btn-lg me-3">View Projects</a>
+            <a href="#" class="btn btn-outline-primary btn-lg">Download Resume</a>
+          </div>
+          <div class="social-links mt-4">
+            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="container py-5">
-    <h3 class="mb-4">About Me</h3>
-    <p>I am an IT professional with hands-on experience in networking, data center setup, and custom system development. I build practical solutions that support real business operations.</p>
+  <section id="about" class="section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About Me</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+            <p class="lead mb-4">I'm an IT professional with over 5 years of experience in network infrastructure, systems administration, and full-stack development.</p>
+            
+            <div class="row mt-5">
+              <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="info-card">
+                  <i class="fas fa-network-wired fa-2x text-primary mb-3"></i>
+                  <h4>Network Infrastructure</h4>
+                  <p>Design and implementation of secure, scalable networks using MikroTik and enterprise solutions.</p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="info-card">
+                  <i class="fas fa-code fa-2x text-primary mb-3"></i>
+                  <h4>Web Development</h4>
+                  <p>Custom business applications, management systems, and responsive web solutions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="container py-5">
-    <h3 class="mb-4">Projects</h3>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 project-card">
-          <div class="card-body">
-            <h5 class="card-title">HR Management System</h5>
-            <p class="card-text">PHP & MySQL. Employee records, attendance tracking, report generation.</p>
+  <section id="projects" class="section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+      <div class="row g-4">
+        <!-- Project Cards -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card">
+            <div class="project-content">
+              <span class="badge bg-primary mb-3">PHP & MySQL</span>
+              <h3 class="h4 mb-3">HR Management System</h3>
+              <p class="mb-3">Comprehensive HR solution with employee records, attendance tracking, payroll integration, and automated report generation.</p>
+              <div class="project-tech">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 project-card">
-          <div class="card-body">
-            <h5 class="card-title">Warehouse & Inventory</h5>
-            <p class="card-text">Custom system for tracking inventory, stock, and shipments.</p>
+        
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card">
+            <div class="project-content">
+              <span class="badge bg-primary mb-3">Full Stack</span>
+              <h3 class="h4 mb-3">Warehouse & Inventory</h3>
+              <p class="mb-3">Real-time inventory tracking system with barcode scanning, stock alerts, and multi-warehouse management capabilities.</p>
+              <div class="project-tech">
+                <span>Laravel</span>
+                <span>Vue.js</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 project-card">
-          <div class="card-body">
-            <h5 class="card-title">Savings & Borrowing System</h5>
-            <p class="card-text">Internal platform for financial operations and reporting.</p>
+        
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-card">
+            <div class="project-content">
+              <span class="badge bg-primary mb-3">Financial System</span>
+              <h3 class="h4 mb-3">Savings & Borrowing</h3>
+              <p class="mb-3">Internal financial platform for cooperatives with loan management, interest calculation, and member dashboard.</p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Django</span>
+                <span>SQLite</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 project-card">
-          <div class="card-body">
-            <h5 class="card-title">Vehicle Management System</h5>
-            <p class="card-text">Track vehicles, usage, and maintenance schedules.</p>
+        
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-card">
+            <div class="project-content">
+              <span class="badge bg-primary mb-3">Logistics</span>
+              <h3 class="h4 mb-3">Vehicle Management</h3>
+              <p class="mb-3">Fleet management system for tracking vehicle usage, maintenance schedules, fuel consumption, and driver assignments.</p>
+              <div class="project-tech">
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>Express</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 project-card">
-          <div class="card-body">
-            <h5 class="card-title">MikroTik Network Setup</h5>
-            <p class="card-text">VLANs, multi-ISP load balancing, failover, and secure network design.</p>
+        
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-card">
+            <div class="project-content">
+              <span class="badge bg-primary mb-3">Networking</span>
+              <h3 class="h4 mb-3">MikroTik Network Setup</h3>
+              <p class="mb-3">Enterprise network infrastructure with VLANs, multi-ISP load balancing, failover configuration, and security implementation.</p>
+              <div class="project-tech">
+                <span>MikroTik</span>
+                <span>VLAN</span>
+                <span>Firewall</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="project-card">
+            <div class="project-content">
+              <span class="badge bg-primary mb-3">E-commerce</span>
+              <h3 class="h4 mb-3">POS & Inventory System</h3>
+              <p class="mb-3">Point of sale system with inventory management, sales analytics, and customer loyalty program integration.</p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MySQL</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -133,21 +202,186 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="container py-5">
-    <h3 class="mb-4">Skills</h3>
-    <p>HTML, CSS, JavaScript, PHP, MySQL, MikroTik, Networking, Hardware Servicing</p>
+  <section id="skills" class="section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
+      
+      <div class="skills-grid">
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="h5 mb-4">Frontend Development</h3>
+          <div class="skill-item">
+            <span>HTML5/CSS3</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>JavaScript</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>React/Vue</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>Bootstrap/Tailwind</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="h5 mb-4">Backend Development</h3>
+          <div class="skill-item">
+            <span>PHP</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>Python</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>Node.js</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>MySQL/PostgreSQL</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="h5 mb-4">Networking & Infrastructure</h3>
+          <div class="skill-item">
+            <span>MikroTik Configuration</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>Network Security</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>Server Administration</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>Cloud Services</span>
+            <div class="progress">
+              <div class="progress-bar" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tech-stack text-center mt-5" data-aos="fade-up">
+        <h3 class="h5 mb-4">Technologies I Work With</h3>
+        <div class="tech-icons">
+          <i class="fab fa-html5" title="HTML5"></i>
+          <i class="fab fa-css3-alt" title="CSS3"></i>
+          <i class="fab fa-js" title="JavaScript"></i>
+          <i class="fab fa-php" title="PHP"></i>
+          <i class="fab fa-python" title="Python"></i>
+          <i class="fab fa-laravel" title="Laravel"></i>
+          <i class="fab fa-react" title="React"></i>
+          <i class="fab fa-vuejs" title="Vue.js"></i>
+          <i class="fab fa-node" title="Node.js"></i>
+          <i class="fas fa-database" title="MySQL"></i>
+          <i class="fas fa-network-wired" title="MikroTik"></i>
+          <i class="fab fa-git-alt" title="Git"></i>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="container py-5">
-    <h3 class="mb-4">Contact</h3>
-    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+  <section id="contact" class="section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="contact-info">
+                  <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                  <h4>Email</h4>
+                  <a href="mailto:ronel.patayon@email.com">ronel.patayon@email.com</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="contact-info">
+                  <i class="fas fa-phone fa-2x text-primary mb-3"></i>
+                  <h4>Phone</h4>
+                  <a href="tel:+1234567890">+63 123 456 7890</a>
+                </div>
+              </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <form class="contact-form" id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="col-12">
+                  <input type="text" class="form-control" placeholder="Subject">
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2024 Ronel O. Patayon. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Custom JS -->
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
