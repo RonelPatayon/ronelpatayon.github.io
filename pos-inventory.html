@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>POS & Inventory System | Ronel O. Patayon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete point of sale system with inventory management, sales analytics, customer loyalty program, and multi-branch support">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6.4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html">Ronel Patayon</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link theme-toggle" href="#" id="theme-toggle">
+              <i class="fa-solid fa-moon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Hero Section -->
+  <section class="project-hero">
+    <div class="container">
+      <div class="row align-items-center min-vh-50 py-5">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="project-badge mb-4">
+            <span class="badge bg-primary me-2">React & Node.js</span>
+            <span class="badge bg-primary me-2">Point of Sale</span>
+            <span class="badge bg-primary me-2">Inventory</span>
+            <span class="badge bg-primary">Multi-branch</span>
+          </div>
+          <h1 class="display-3 fw-bold mb-3">POS & Inventory Management System</h1>
+          <p class="lead mb-4">A complete retail management solution combining powerful point-of-sale features with real-time inventory tracking, customer loyalty programs, and comprehensive sales analytics for multi-branch operations.</p>
+          <div class="project-links">
+            <a href="#" class="btn btn-primary btn-lg me-3"><i class="fas fa-cash-register me-2"></i>Live Demo</a>
+            <a href="#" class="btn btn-outline-primary btn-lg"><i class="fab fa-github me-2"></i>Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="project-overview section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title" data-aos="fade-up">Project Overview</h2>
+          <div class="overview-content" data-aos="fade-up" data-aos-delay="100">
+            <p class="lead">The POS & Inventory Management System was developed for a retail chain with 5 branches, processing over 1,000 daily transactions. It streamlines sales operations, maintains real-time inventory across all locations, manages customer loyalty programs, and provides actionable business insights through comprehensive analytics.</p>
+            
+            <div class="row mt-5">
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">5+</div>
+                  <div class="stat-label">Branches</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">1,000+</div>
+                  <div class="stat-label">Daily Transactions</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">10,000+</div>
+                  <div class="stat-label">Products</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="stat-card">
+                  <div class="stat-number">50,000+</div>
+                  <div class="stat-label">Loyalty Members</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POS Interface Preview -->
+  <section class="pos-preview section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">POS Interface</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="pos-terminal" data-aos="fade-up">
+            <div class="pos-header">
+              <div class="store-info">
+                <h4><i class="fas fa-store me-2"></i>Main Branch</h4>
+                <span class="badge bg-success">Open</span>
+              </div>
+              <div class="cashier-info">
+                <i class="fas fa-user-circle"></i>
+                <span>Cashier: Maria Santos</span>
+                <span class="date-time">2024-01-15 10:30 AM</span>
+              </div>
+            </div>
+            
+            <div class="pos-grid">
+              <!-- Cart Section -->
+              <div class="cart-section">
+                <div class="cart-header">
+                  <h5>Shopping Cart</h5>
+                  <span class="badge bg-primary">3 items</span>
+                </div>
+                
+                <div class="cart-items">
+                  <div class="cart-item">
+                    <div class="item-details">
+                      <span class="item-name">Gallon of Milk</span>
+                      <span class="item-sku">SKU: MILK-001</span>
+                    </div>
+                    <div class="item-quantity">
+                      <button class="qty-btn"><i class="fas fa-minus"></i></button>
+                      <span>2</span>
+                      <button class="qty-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="item-price">$5.98</div>
+                    <button class="remove-item"><i class="fas fa-trash"></i></button>
+                  </div>
+                  
+                  <div class="cart-item">
+                    <div class="item-details">
+                      <span class="item-name">Bread Loaf</span>
+                      <span class="item-sku">SKU: BRD-002</span>
+                    </div>
+                    <div class="item-quantity">
+                      <button class="qty-btn"><i class="fas fa-minus"></i></button>
+                      <span>1</span>
+                      <button class="qty-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="item-price">$2.49</div>
+                    <button class="remove-item"><i class="fas fa-trash"></i></button>
+                  </div>
+                  
+                  <div class="cart-item">
+                    <div class="item-details">
+                      <span class="item-name">Eggs (Dozen)</span>
+                      <span class="item-sku">SKU: EGG-003</span>
+                    </div>
+                    <div class="item-quantity">
+                      <button class="qty-btn"><i class="fas fa-minus"></i></button>
+                      <span>1</span>
+                      <button class="qty-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="item-price">$3.99</div>
+                    <button class="remove-item"><i class="fas fa-trash"></i></button>
+                  </div>
+                </div>
+                
+                <div class="cart-summary">
+                  <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span>$12.46</span>
+                  </div>
+                  <div class="summary-row">
+                    <span>Tax (8%):</span>
+                    <span>$1.00</span>
+                  </div>
+                  <div class="summary-row total">
+                    <span>Total:</span>
+                    <span>$13.46</span>
+                  </div>
+                </div>
+                
+                <div class="payment-section">
+                  <div class="payment-methods">
+                    <button class="payment-btn active">Cash</button>
+                    <button class="payment-btn">Card</button>
+                    <button class="payment-btn">QR Code</button>
+                    <button class="payment-btn">Gift Card</button>
+                  </div>
+                  <div class="payment-actions">
+                    <button class="btn btn-success btn-lg flex-grow-1">
+                      <i class="fas fa-check me-2"></i>Complete Sale
+                    </button>
+                    <button class="btn btn-danger btn-lg">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Product Grid Section -->
+              <div class="products-section">
+                <div class="search-bar">
+                  <i class="fas fa-search"></i>
+                  <input type="text" placeholder="Search products by name or scan barcode...">
+                  <button class="btn btn-primary">Scan</button>
+                </div>
+                
+                <div class="category-tabs">
+                  <button class="category-btn active">All</button>
+                  <button class="category-btn">Groceries</button>
+                  <button class="category-btn">Dairy</button>
+                  <button class="category-btn">Bakery</button>
+                  <button class="category-btn">Beverages</button>
+                  <button class="category-btn">Snacks</button>
+                </div>
+                
+                <div class="product-grid">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <i class="fas fa-box"></i>
+                    </div>
+                    <div class="product-info">
+                      <h6>Fresh Milk</h6>
+                      <span class="price">$2.99</span>
+                      <small>Stock: 45</small>
+                    </div>
+                  </div>
+                  
+                  <div class="product-card">
+                    <div class="product-image">
+                      <i class="fas fa-box"></i>
+                    </div>
+                    <div class="product-info">
+                      <h6>Bread Loaf</h6>
+                      <span class="price">$2.49</span>
+                      <small>Stock: 23</small>
+                    </div>
+                  </div>
+                  
+                  <div class="product-card">
+                    <div class="product-image">
+                      <i class="fas fa-box"></i>
+                    </div>
+                    <div class="product-info">
+                      <h6>Eggs (Dozen)</h6>
+                      <span class="price">$3.99</span>
+                      <small>Stock: 56</small>
+                    </div>
+                  </div>
+                  
+                  <div class="product-card">
+                    <div class="product-image">
+                      <i class="fas fa-box"></i>
+                    </div>
+                    <div class="product-info">
+                      <h6>Coca Cola</h6>
+                      <span class="price">$1.49</span>
+                      <small>Stock: 112</small>
+                    </div>
+                  </div>
+                  
+                  <div class="product-card">
+                    <div class="product-image">
+                      <i class="fas fa-box"></i>
+                    </div>
+                    <div class="product-info">
+                      <h6>Chips</h6>
+                      <span class="price">$1.99</span>
+                      <small>Stock: 78</small>
+                    </div>
+                  </div>
+                  
+                  <div class="product-card">
+                    <div class="product-image">
+                      <i class="fas fa-box"></i>
+                    </div>
+                    <div class="product-info">
+                      <h6>Butter</h6>
+                      <span class="price">$3.49</span>
+                      <small>Stock: 34</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="key-features section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Key Features</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-cash-register"></i>
+            </div>
+            <h3 class="h4 mb-3">Point of Sale</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Intuitive touch-friendly interface</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Barcode & QR code scanning</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Multiple payment methods</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Split payments & returns</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Digital receipts via SMS/Email</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-boxes"></i>
+            </div>
+            <h3 class="h4 mb-3">Inventory Management</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Real-time stock updates</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Multi-branch inventory sync</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Low stock alerts</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Purchase order management</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Stock transfer between branches</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="h4 mb-3">Sales Analytics</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Real-time sales dashboard</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Daily/weekly/monthly reports</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Best-selling products analysis</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Profit margin tracking</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Sales forecast predictions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-crown"></i>
+            </div>
+            <h3 class="h4 mb-3">Customer Loyalty</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Points-based rewards system</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Tiered membership levels</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Birthday & special promotions</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Customer purchase history</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Automated SMS marketing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <h3 class="h4 mb-3">User Management</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Role-based access control</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Cashier shift management</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Sales commission tracking</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Activity audit logs</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Login attempt monitoring</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="h4 mb-3">Mobile Integration</h3>
+            <ul class="feature-list">
+              <li><i class="fas fa-check text-primary me-2"></i>Mobile POS for tablets</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Customer app for loyalty</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Real-time notifications</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Offline mode support</li>
+              <li><i class="fas fa-check text-primary me-2"></i>Digital wallet integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack -->
+  <section class="tech-stack section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Technology Stack</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="tech-grid">
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
+              <i class="fab fa-react"></i>
+              <span>React 18</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="150">
+              <i class="fab fa-node"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fas fa-database"></i>
+              <span>MongoDB</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="250">
+              <i class="fas fa-bolt"></i>
+              <span>Express.js</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fas fa-qrcode"></i>
+              <span>Barcode/QR</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="350">
+              <i class="fas fa-chart-pie"></i>
+              <span>Chart.js</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
+              <i class="fas fa-cloud"></i>
+              <span>AWS</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="450">
+              <i class="fas fa-mobile-alt"></i>
+              <span>React Native</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="500">
+              <i class="fas fa-lock"></i>
+              <span>JWT Auth</span>
+            </div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="550">
+              <i class="fas fa-credit-card"></i>
+              <span>Payment Gateway</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- System Architecture -->
+  <section class="system-architecture section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">System Architecture</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="architecture-diagram">
+            <div class="arch-box frontend">
+              <i class="fab fa-react"></i>
+              <h4>Frontend</h4>
+              <p>React POS<br>Mobile App<br>Customer Portal</p>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="arch-box api">
+              <i class="fab fa-node"></i>
+              <h4>API Layer</h4>
+              <p>RESTful API<br>WebSocket<br>Authentication</p>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="arch-box backend">
+              <i class="fas fa-server"></i>
+              <h4>Services</h4>
+              <p>Inventory Service<br>Payment Service<br>Analytics Engine</p>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="arch-box database">
+              <i class="fas fa-database"></i>
+              <h4>Data Layer</h4>
+              <p>MongoDB<br>Redis Cache<br>Elasticsearch</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="architecture-content">
+            <h3 class="h4 mb-3">Real-time Microservices Architecture</h3>
+            <p>The system uses a microservices architecture with real-time synchronization across all branches, ensuring inventory accuracy and seamless operations.</p>
+            <ul class="arch-list mt-4">
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Real-time Sync:</strong> WebSocket for instant updates across branches</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Offline Support:</strong> Local storage with automatic sync</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Scalable:</strong> Handles 100+ concurrent POS terminals</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>High Availability:</strong> Load balanced API servers</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Data Consistency:</strong> Event-driven architecture</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Database Schema -->
+  <section class="database-schema section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Database Schema</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="schema-diagram" data-aos="fade-up">
+            <pre class="schema-code"><code>
+// MongoDB Collections Structure
+
+// Products Collection
+{
+  _id: ObjectId,
+  sku: "MILK-001",
+  name: "Fresh Milk",
+  description: "1 Gallon Fresh Milk",
+  category: "Dairy",
+  brand: "Local Dairy",
+  price: 2.99,
+  cost: 1.99,
+  tax_rate: 8,
+  barcode: "890123456789",
+  image_url: "...",
+  active: true,
+  created_at: ISODate,
+  updated_at: ISODate
+}
+
+// Inventory Collection (per branch)
+{
+  _id: ObjectId,
+  branch_id: ObjectId,
+  product_id: ObjectId,
+  quantity: 45,
+  reserved_quantity: 2,
+  reorder_level: 10,
+  max_level: 100,
+  bin_location: "A-12",
+  last_counted: ISODate,
+  created_at: ISODate
+}
+
+// Sales Transaction
+{
+  _id: ObjectId,
+  transaction_number: "POS-20240115-001",
+  branch_id: ObjectId,
+  cashier_id: ObjectId,
+  customer_id: ObjectId (optional),
+  items: [
+    {
+      product_id: ObjectId,
+      sku: "MILK-001",
+      name: "Fresh Milk",
+      quantity: 2,
+      unit_price: 2.99,
+      discount: 0,
+      subtotal: 5.98
+    }
+  ],
+  subtotal: 12.46,
+  tax: 1.00,
+  discount_total: 0,
+  total: 13.46,
+  payment_method: "cash",
+  payment_details: {
+    amount_tendered: 20,
+    change: 6.54
+  },
+  status: "completed",
+  created_at: ISODate
+}
+
+// Customers / Loyalty Members
+{
+  _id: ObjectId,
+  membership_number: "MEM-2024-0001",
+  first_name: "Juan",
+  last_name: "Dela Cruz",
+  email: "juan@email.com",
+  phone: "+639123456789",
+  birth_date: ISODate,
+  tier: "gold", // regular, silver, gold, platinum
+  points_balance: 1250,
+  total_spent: 15000,
+  joined_date: ISODate,
+  preferences: {
+    sms_marketing: true,
+    email_marketing: true
+  }
+}
+
+// Branches
+{
+  _id: ObjectId,
+  code: "BR-001",
+  name: "Main Branch",
+  address: "123 Main St",
+  phone: "+639123456789",
+  manager_id: ObjectId,
+  pos_devices: ["POS-01", "POS-02"],
+  operating_hours: {
+    monday: "8:00-20:00",
+    tuesday: "8:00-20:00"
+  }
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sales Dashboard Preview -->
+  <section class="dashboard-preview section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Analytics Dashboard</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="dashboard-card">
+            <h3 class="h5 mb-3">Today's Sales</h3>
+            <div class="kpi-grid">
+              <div class="kpi-item">
+                <span class="kpi-label">Revenue</span>
+                <span class="kpi-value">₱12,450</span>
+                <span class="kpi-change positive">+15%</span>
+              </div>
+              <div class="kpi-item">
+                <span class="kpi-label">Transactions</span>
+                <span class="kpi-value">124</span>
+                <span class="kpi-change positive">+8%</span>
+              </div>
+              <div class="kpi-item">
+                <span class="kpi-label">Avg. Order</span>
+                <span class="kpi-value">₱100.40</span>
+                <span class="kpi-change positive">+5%</span>
+              </div>
+            </div>
+            <canvas id="salesChart" height="200"></canvas>
+          </div>
+        </div>
+        
+        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="dashboard-card">
+            <h3 class="h5 mb-3">Top Products</h3>
+            <div class="top-products">
+              <div class="top-product-item">
+                <span class="product-rank">1</span>
+                <span class="product-name">Fresh Milk</span>
+                <span class="product-sales">₱2,450</span>
+                <span class="product-trend positive">↑12%</span>
+              </div>
+              <div class="top-product-item">
+                <span class="product-rank">2</span>
+                <span class="product-name">Bread Loaf</span>
+                <span class="product-sales">₱1,890</span>
+                <span class="product-trend positive">↑8%</span>
+              </div>
+              <div class="top-product-item">
+                <span class="product-rank">3</span>
+                <span class="product-name">Eggs (Dozen)</span>
+                <span class="product-sales">₱1,550</span>
+                <span class="product-trend positive">↑5%</span>
+              </div>
+              <div class="top-product-item">
+                <span class="product-rank">4</span>
+                <span class="product-name">Coca Cola</span>
+                <span class="product-sales">₱1,230</span>
+                <span class="product-trend negative">↓3%</span>
+              </div>
+              <div class="top-product-item">
+                <span class="product-rank">5</span>
+                <span class="product-name">Chips</span>
+                <span class="product-sales">₱980</span>
+                <span class="product-trend positive">↑2%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loyalty Program Preview -->
+  <section class="loyalty-preview section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Loyalty Program</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="loyalty-card">
+            <div class="member-tier gold">
+              <i class="fas fa-crown"></i>
+              <span>GOLD MEMBER</span>
+            </div>
+            <div class="member-info">
+              <h3>Juan Dela Cruz</h3>
+              <p class="member-id">MEM-2024-0001</p>
+              <div class="points-display">
+                <span class="points-value">1,250</span>
+                <span class="points-label">Points</span>
+              </div>
+              <div class="points-progress">
+                <div class="progress">
+                  <div class="progress-bar" style="width: 75%"></div>
+                </div>
+                <small>750 more points to reach Platinum</small>
+              </div>
+            </div>
+            <div class="member-benefits">
+              <div class="benefit-item">
+                <i class="fas fa-tag"></i>
+                <span>10% off all purchases</span>
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-gift"></i>
+                <span>Birthday bonus 100 points</span>
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-truck"></i>
+                <span>Free delivery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="loyalty-features">
+            <h3 class="h4 mb-4">Reward Your Customers</h3>
+            <div class="tier-grid">
+              <div class="tier-item regular">
+                <h5>Regular</h5>
+                <p>0-500 pts</p>
+                <small>5% discount</small>
+              </div>
+              <div class="tier-item silver">
+                <h5>Silver</h5>
+                <p>501-1000 pts</p>
+                <small>7% discount</small>
+              </div>
+              <div class="tier-item gold">
+                <h5>Gold</h5>
+                <p>1001-2000 pts</p>
+                <small>10% discount</small>
+              </div>
+              <div class="tier-item platinum">
+                <h5>Platinum</h5>
+                <p>2001+ pts</p>
+                <small>15% discount</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Case Scenarios -->
+  <section class="use-cases section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Use Case Scenarios</h2>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="use-case-timeline">
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="use-case-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Regular Sale Transaction</h3>
+                <p>Cashier scans items using barcode scanner, system adds to cart, applies any member discounts, processes payment (cash/card/QR), and prints/sends receipt. Inventory is automatically updated.</p>
+              </div>
+            </div>
+            
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="use-case-icon">
+                <i class="fas fa-undo-alt"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Return & Refund</h3>
+                <p>Customer returns item with receipt. Cashier processes return, system verifies original transaction, updates inventory, processes refund, and logs the return for audit purposes.</p>
+              </div>
+            </div>
+            
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="use-case-icon">
+                <i class="fas fa-exchange-alt"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Stock Transfer Between Branches</h3>
+                <p>Branch A needs items from Branch B. Manager creates transfer order, Branch B picks items, system updates both inventories, and tracks the transfer until received.</p>
+              </div>
+            </div>
+            
+            <div class="use-case-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="use-case-icon">
+                <i class="fas fa-gift"></i>
+              </div>
+              <div class="use-case-content">
+                <h3 class="h5 mb-2">Loyalty Points Redemption</h3>
+                <p>Member wants to redeem points for discount. Cashier enters membership number, system displays available points, applies discount, and deducts points from member balance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inventory Alerts -->
+  <section class="inventory-alerts section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Inventory Alerts</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="alerts-list" data-aos="fade-up">
+            <div class="alert-item warning">
+              <i class="fas fa-exclamation-triangle"></i>
+              <div class="alert-content">
+                <h5>Low Stock Alert</h5>
+                <p>Fresh Milk is below reorder level (8 units left)</p>
+              </div>
+              <button class="btn btn-sm btn-primary">Reorder</button>
+            </div>
+            
+            <div class="alert-item danger">
+              <i class="fas fa-clock"></i>
+              <div class="alert-content">
+                <h5>Expiring Soon</h5>
+                <p>15 units of Yogurt expiring in 3 days</p>
+              </div>
+              <button class="btn btn-sm btn-warning">Markdown</button>
+            </div>
+            
+            <div class="alert-item success">
+              <i class="fas fa-check-circle"></i>
+              <div class="alert-content">
+                <h5>Order Received</h5>
+                <p>Purchase Order #PO-2024-015 has been received</p>
+              </div>
+              <button class="btn btn-sm btn-success">View</button>
+            </div>
+            
+            <div class="alert-item info">
+              <i class="fas fa-truck"></i>
+              <div class="alert-content">
+                <h5>Transfer In Transit</h5>
+                <p>Stock transfer from Branch B is on the way</p>
+              </div>
+              <button class="btn btn-sm btn-info">Track</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges & Solutions -->
+  <section class="challenges section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Challenges & Solutions</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="challenge-list">
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Real-time Inventory Sync</h3>
+              </div>
+              <p>Keeping inventory synchronized across 5 branches in real-time was challenging. Implemented WebSocket connections with Redis pub/sub for instant updates and conflict resolution.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Offline Mode</h3>
+              </div>
+              <p>Internet outages at some branches couldn't stop sales. Implemented IndexedDB for local storage with automatic sync when connection is restored, ensuring no data loss.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Complex Discount Rules</h3>
+              </div>
+              <p>Various discount types (member tier, promo codes, volume discounts) needed accurate calculation. Created a flexible rule engine that processes discounts in correct priority order.</p>
+            </div>
+            
+            <div class="challenge-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="challenge-header">
+                <i class="fas fa-exclamation-triangle text-warning"></i>
+                <h3 class="h5">Payment Gateway Integration</h3>
+              </div>
+              <p>Integrating multiple payment providers with different APIs was complex. Built a unified payment abstraction layer that handles different providers consistently.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section-padding bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Client Feedback</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="testimonial-card" data-aos="fade-up">
+            <i class="fas fa-quote-left fa-3x text-primary mb-3"></i>
+            <p class="lead mb-4">"This POS system has revolutionized our retail operations. We've reduced checkout time by 40%, eliminated inventory discrepancies, and our customers love the loyalty program. The multi-branch support gives us complete visibility across all locations."</p>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/60x60/1e293b/38bdf8?text=ML" alt="Client" class="rounded-circle">
+              <div>
+                <h5 class="mb-1">Maria Lopez</h5>
+                <p class="text-muted">Operations Director, FreshMart Supermarkets</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Projects -->
+  <section class="related-projects section-padding">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Related Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">Warehouse & Inventory</h3>
+              <p class="mb-3">Advanced inventory management</p>
+              <a href="warehouse.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">Savings & Borrowing</h3>
+              <p class="mb-3">Financial system for cooperatives</p>
+              <a href="savings-borrowing.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="related-card">
+            <div class="related-content">
+              <h3 class="h5 mb-3">Fleet Management</h3>
+              <p class="mb-3">Vehicle tracking system</p>
+              <a href="fleet-management.html" class="btn btn-outline-primary btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content text-center">
+        <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Ready to Modernize Your Retail Business?</h2>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Let's build a customized POS system for your specific needs.</p>
+        <a href="index.html#contact" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="200">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2024 Ronel O. Patayon. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chart.js Scripts -->
+  <script>
+    // Sales Chart
+    const ctx = document.getElementById('salesChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM'],
+        datasets: [{
+          label: 'Sales (₱)',
+          data: [1200, 1500, 2100, 2800, 3500, 3200, 2900, 3100, 2800, 2400],
+          borderColor: '#38bdf8',
+          backgroundColor: 'rgba(56, 189, 248, 0.1)',
+          tension: 0.4,
+          fill: true
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            labels: { color: '#e5e7eb' }
+          }
+        },
+        scales: {
+          y: {
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            ticks: { color: '#e5e7eb' }
+          },
+          x: {
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            ticks: { color: '#e5e7eb' }
+          }
+        }
+      }
+    });
+  </script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/project-detail.js"></script>
+</body>
+</html>
