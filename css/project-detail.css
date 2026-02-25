@@ -592,3 +592,200 @@ body.light-mode .roi-card .form-control {
     padding: 2rem;
   }
 }
+
+/* Financial Products Cards */
+.product-card {
+  background: var(--dark-surface);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: var(--transition);
+  height: 100%;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-color: var(--primary-color);
+}
+
+.product-header {
+  background: rgba(56, 189, 248, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.product-header i {
+  color: var(--primary-color);
+}
+
+.product-body {
+  padding: 1.5rem;
+}
+
+.product-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.product-item:last-child {
+  border-bottom: none;
+}
+
+.product-item h5 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.product-item p {
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.product-item small {
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
+/* Loan Calculator */
+.calculator-card {
+  background: var(--dark-surface);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.calculator-card .form-control {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--dark-text);
+  padding: 0.75rem;
+  border-radius: 10px;
+}
+
+.calculator-card .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.25);
+}
+
+.calculator-card .form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.result-box {
+  background: rgba(56, 189, 248, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.result-box small {
+  display: block;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.result-box h3 {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Amortization Table */
+#amortizationTable {
+  margin-top: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#amortizationTable thead {
+  background: var(--primary-color);
+  color: #020617;
+}
+
+#amortizationTable th {
+  font-weight: 600;
+  padding: 1rem;
+}
+
+#amortizationTable td {
+  padding: 0.75rem 1rem;
+  background: rgba(255,255,255,0.02);
+}
+
+#amortizationTable tbody tr:hover td {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/* Light Mode Adjustments */
+body.light-mode .product-card {
+  background: var(--light-surface);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+body.light-mode .product-header {
+  background: rgba(56, 189, 248, 0.05);
+}
+
+body.light-mode .product-item {
+  border-bottom-color: #e2e8f0;
+}
+
+body.light-mode .calculator-card {
+  background: var(--light-surface);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+body.light-mode .calculator-card .form-control {
+  background: #ffffff;
+  border-color: #e2e8f0;
+  color: var(--light-text);
+}
+
+body.light-mode .result-box {
+  background: rgba(56, 189, 248, 0.05);
+}
+
+body.light-mode #amortizationTable td {
+  background: #f8fafc;
+  color: var(--light-text);
+}
+
+body.light-mode #amortizationTable tbody tr:hover td {
+  background: rgba(56, 189, 248, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-header {
+    padding: 1rem;
+  }
+  
+  .product-body {
+    padding: 1rem;
+  }
+  
+  .calculator-card {
+    padding: 1.5rem;
+  }
+  
+  .result-box {
+    padding: 1rem;
+  }
+  
+  .result-box h3 {
+    font-size: 1.5rem;
+  }
+  
+  #amortizationTable {
+    font-size: 0.85rem;
+  }
+  
+  #amortizationTable th,
+  #amortizationTable td {
+    padding: 0.5rem;
+  }
+}
