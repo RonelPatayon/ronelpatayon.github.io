@@ -461,4 +461,27 @@ body.light-mode .contact-form .form-control {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-dark);
+}/* For clickable project cards */
+a.text-decoration-none {
+  display: block;
+  height: 100%;
 }
+
+a.text-decoration-none:hover .project-card {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2);
+  border-color: var(--primary-color);
+}
+
+.project-link {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--transition);
+}
+
+.project-card:hover .project-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* For button approach - already styled in existing CSS */
